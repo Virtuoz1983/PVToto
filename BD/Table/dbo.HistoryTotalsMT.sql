@@ -3,6 +3,7 @@ IF OBJECT_ID('dbo.HistoryTotalsMT', 'U') IS NULL
     BEGIN
 		CREATE TABLE [dbo].[HistoryTotalsMT]
 		(
+			[id] [int] IDENTITY(1,1) NOT NULL,
 			[tirazhi] [nvarchar](255) NULL,
 			[data] [datetime] NULL,
 			[dzhek] [numeric](9, 5) NULL,
@@ -71,8 +72,10 @@ IF OBJECT_ID('dbo.HistoryTotalsMT', 'U') IS NULL
 			[ver23] [numeric](9, 2) NULL,
 			[pul23] [numeric](9, 2) NULL,
 			[ver_ld] [numeric](9, 2) NULL,
-			[pul_ld] [numeric](9, 2) NULL
-		) ON [PRIMARY];
+			[pul_ld] [numeric](9, 2) NULL,
+	            CONSTRAINT [PK_HistoryTotalsMT_ID] PRIMARY KEY CLUSTERED ( [id] ASC )
+                WITH ( PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON ) ON [PRIMARY]
+ 		) ON [PRIMARY];
   END;
 GO
 
