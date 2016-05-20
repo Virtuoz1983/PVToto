@@ -1,0 +1,86 @@
+USE [TotDB]
+IF OBJECT_ID('dbo.HistoryTotalsMT', 'U') IS NULL
+    BEGIN
+		CREATE TABLE [dbo].[HistoryTotalsMT]
+		(
+			[id] [int] IDENTITY(1,1) NOT NULL,
+			[tirag] [nvarchar](255) NULL,
+			[data] [datetime] NULL,
+			[jack pot] [numeric](9,5) NULL,
+			[pool] [numeric](9,5) NULL,
+			[complex] [numeric](9,5) NULL,
+			[max win] [numeric](9,5) NULL,
+			[quan option] [int] NULL,
+			[quan uniq] [int] NULL,
+			[win jack] [numeric](9,5) NULL,
+			[quan8] [int] NULL,
+			[gues8] [numeric](9,5) NULL,
+			[rat8] [numeric](9,5) NULL,
+			[quan7] [int] NULL,
+			[sum7] [numeric](9,5) NULL,
+			[res7] [numeric](9,5) NULL,
+			[quan6] [int] NULL,
+			[sum6] [numeric](9,5) NULL,
+			[res6] [numeric](9,5) NULL,
+			[quan5] [int] NULL,
+			[sum5] [numeric](9,5) NULL,
+			[res5] [numeric](9,5) NULL,
+			[quan4] [int] NULL,
+			[sum4] [numeric](9,5) NULL,
+			[res4] [numeric](9,5) NULL,
+			[quan3] [int] NULL,
+			[sum3] [numeric](9,5) NULL,
+			[res3] [numeric](9,5) NULL,
+			[quan2] [int] NULL,
+			[sum2] [numeric](9,5) NULL,
+			[res2] [numeric](9,5) NULL,
+			[numb] [int] NULL,
+			[sect] [nvarchar](255) NULL,
+			[match] [nvarchar](255) NULL,
+			[account] [nvarchar](10) NULL,
+			[exodus] [nvarchar](10) NULL,
+			[prob10] [numeric](9,2) NULL,
+			[pool10] [numeric](9,2) NULL,
+			[prob20] [numeric](9,2) NULL,
+			[pool20] [numeric](9,2) NULL,
+			[prob21] [numeric](9,2) NULL,
+			[pool21] [numeric](9,2) NULL,
+			[prob30] [numeric](9,2) NULL,
+			[pool30] [numeric](9,2) NULL,
+			[prob31] [numeric](9,2) NULL,
+			[pool31] [numeric](9,2) NULL,
+			[prob32] [numeric](9,2) NULL,
+			[pool32] [numeric](9,2) NULL,
+			[prob00] [numeric](9,2) NULL,
+			[pool00] [numeric](9,2) NULL,
+			[prob11] [numeric](9,2) NULL,
+			[pool11] [numeric](9,2) NULL,
+			[prob22] [numeric](9,2) NULL,
+			[pool22] [numeric](9,2) NULL,
+			[prob33] [numeric](9,2) NULL,
+			[pool33] [numeric](9,2) NULL,
+			[prob01] [numeric](9,2) NULL,
+			[pool01] [numeric](9,2) NULL,
+			[prob02] [numeric](9,2) NULL,
+			[pool02] [numeric](9,2) NULL,
+			[prob12] [numeric](9,2) NULL,
+			[pool12] [numeric](9,2) NULL,
+			[prob03] [numeric](9,2) NULL,
+			[pool03] [numeric](9,2) NULL,
+			[prob13] [numeric](9,2) NULL,
+			[pool13] [numeric](9,2) NULL,
+			[prob23] [numeric](9,2) NULL,
+			[pool23] [numeric](9,2) NULL,
+			[probld] [numeric](9,2) NULL,
+			[poolld] [numeric](9,2) NULL,
+	            CONSTRAINT [PK_HistoryTotalsMT_ID] PRIMARY KEY CLUSTERED
+				(
+					[id] ASC
+				) ON [PRIMARY]
+				,CONSTRAINT [UC_HistoryTotalsMT_T_M] UNIQUE NONCLUSTERED
+				(
+					[tirag] ASC
+					,[match]  ASC
+				) ON [PRIMARY]
+ 		) ON [PRIMARY];
+  END;
