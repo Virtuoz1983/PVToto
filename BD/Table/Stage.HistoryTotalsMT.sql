@@ -1,18 +1,18 @@
 /*
-		Main table for loading history about previously tirages
+		Stage table for loading history about previously tirages
 
-		Yakovlev P.V.	   07.06.2016  - created this table
-		Tereschenko V.A.   08.06.2016  - changed name and types for fields according to name convention. Changed index UC_HistoryTotalsMT_T_M.
+		Tereschenko V.A.   07.06.2016  - created this table		
 
 */
 
-IF OBJECT_ID('dbo.HistoryTotalsMT', 'U') IS NULL
+
+IF OBJECT_ID('Stage.HistoryTotalsMT', 'U') IS NULL
     BEGIN
 
-        CREATE TABLE dbo.HistoryTotalsMT
+        CREATE TABLE Stage.HistoryTotalsMT
             (
               id		 INT IDENTITY(1, 1) NOT NULL ,
-              tirag		 NVARCHAR(5)    NULL ,
+              tirag		 SMALLINT		NULL ,
               [data]	 DATETIME		NULL ,
               jackPot	 NUMERIC(12, 5) NULL ,
               [pool]	 NUMERIC(12, 5) NULL ,
