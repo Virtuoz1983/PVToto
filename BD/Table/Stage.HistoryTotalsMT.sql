@@ -11,8 +11,8 @@ IF OBJECT_ID('Stage.HistoryTotalsMT', 'U') IS NULL
 
         CREATE TABLE Stage.HistoryTotalsMT
             (
-              id		 INT IDENTITY(1, 1) NOT NULL ,
-              tirag		 NVARCHAR(30)		NULL ,
+              id	 INT IDENTITY(1, 1) NOT NULL ,
+              tirag	 NVARCHAR(30)		NULL ,
               [data]	 DATETIME		NULL ,
               jackPot	 NUMERIC(12, 5) NULL ,
               [pool]	 NUMERIC(12, 5) NULL ,
