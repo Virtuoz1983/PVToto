@@ -2,13 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>VTtoto</Name>
-    <LastWriteTime>2016-06-08T07:07:37.2287985Z</LastWriteTime>
+    <LastWriteTime>2016-06-08T09:17:27.6664226Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Package.dtsx</Name>
-      <LastWriteTime>2016-06-08T07:07:37.2067972Z</LastWriteTime>
+      <Name>MAIN_PACKAGE.dtsx</Name>
+      <LastWriteTime>2016-06-08T09:17:27.5874147Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LOAD_TIRAGES_HISTORY.dtsx</Name>
+      <LastWriteTime>2016-06-08T09:17:55.9342133Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LOAD_TABLE_MATCHES_HISTORY.dtsx</Name>
+      <LastWriteTime>2016-06-08T09:17:27.580414Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

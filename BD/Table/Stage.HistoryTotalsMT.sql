@@ -12,7 +12,7 @@ IF OBJECT_ID('Stage.HistoryTotalsMT', 'U') IS NULL
         CREATE TABLE Stage.HistoryTotalsMT
             (
               id		 INT IDENTITY(1, 1) NOT NULL ,
-              tirag		 SMALLINT		NULL ,
+              tirag		 NVARCHAR(30)		NULL ,
               [data]	 DATETIME		NULL ,
               jackPot	 NUMERIC(12, 5) NULL ,
               [pool]	 NUMERIC(12, 5) NULL ,
@@ -22,8 +22,8 @@ IF OBJECT_ID('Stage.HistoryTotalsMT', 'U') IS NULL
               quanUniq	 INT NULL ,
               winJack	 NUMERIC(12, 5) NULL ,
               quan8		 INT NULL ,
-              gues8		 NUMERIC(12, 5) NULL ,
-              rat8		 NUMERIC(12, 5) NULL ,
+              sum8		 NUMERIC(12, 5) NULL ,
+              res8		 NUMERIC(12, 5) NULL ,
               quan7		 INT NULL ,
               sum7		 NUMERIC(12, 5) NULL ,
               res7		 NUMERIC(12, 5) NULL ,
@@ -81,8 +81,7 @@ IF OBJECT_ID('Stage.HistoryTotalsMT', 'U') IS NULL
               pool23	 NUMERIC(9, 2) NULL ,
               probld	 NUMERIC(9, 2) NULL ,
               poolld	 NUMERIC(9, 2) NULL ,
-              CONSTRAINT PK_HistoryTotalsMT_ID PRIMARY KEY CLUSTERED (id ASC ) ON [PRIMARY] ,
-              CONSTRAINT UC_HistoryTotalsMT_T_M UNIQUE NONCLUSTERED  (tirag ASC, numb ASC ) ON [PRIMARY]
+              CONSTRAINT PK_StageHistoryTotalsMT_ID PRIMARY KEY CLUSTERED (id ASC ) ON [PRIMARY] ,              
             )
         ON  [PRIMARY];
     END;
