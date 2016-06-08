@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "VTtoto", "Проект служб SSIS2\VTtoto.dtproj", "{C878931D-027A-470D-9C9F-8E8C3B23A5C0}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "VTtoto", "VTtoto\VTtoto.dtproj", "{48AF7CE7-C222-4740-A407-6119B4079642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C878931D-027A-470D-9C9F-8E8C3B23A5C0}.Development|Default.ActiveCfg = Development
-		{C878931D-027A-470D-9C9F-8E8C3B23A5C0}.Development|Default.Build.0 = Development
+		{48AF7CE7-C222-4740-A407-6119B4079642}.Development|Default.ActiveCfg = Development
+		{48AF7CE7-C222-4740-A407-6119B4079642}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
