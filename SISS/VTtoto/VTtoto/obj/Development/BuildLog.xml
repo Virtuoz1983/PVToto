@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
-    <Name>Проект служб SSIS2</Name>
-    <LastWriteTime>2016-06-06T12:41:02.519591Z</LastWriteTime>
+    <Name>VTtoto</Name>
+    <LastWriteTime>2016-06-08T07:07:37.2287985Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2016-06-06T14:04:52.95941Z</LastWriteTime>
+      <LastWriteTime>2016-06-08T07:07:37.2067972Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
