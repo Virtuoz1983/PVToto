@@ -1,15 +1,18 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "VTtoto", "VTtoto\VTtoto.dtproj", "{48AF7CE7-C222-4740-A407-6119B4079642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
+		VT_Settings|Default = VT_Settings|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{48AF7CE7-C222-4740-A407-6119B4079642}.Development|Default.ActiveCfg = Development
 		{48AF7CE7-C222-4740-A407-6119B4079642}.Development|Default.Build.0 = Development
+		{48AF7CE7-C222-4740-A407-6119B4079642}.VT_Settings|Default.ActiveCfg = VT_Settings
+		{48AF7CE7-C222-4740-A407-6119B4079642}.VT_Settings|Default.Build.0 = VT_Settings
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
