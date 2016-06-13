@@ -8,7 +8,7 @@
 USE [TotDB]
 IF OBJECT_ID('dbo.Tot_Variants', 'U') IS NULL
     BEGIN
-		CREATE TABLE [dbo].[;]
+		CREATE TABLE [dbo].[Tot_Variants]
 			(
 			[id] [int] IDENTITY(1,1) NOT NULL,
 			[kol] [int] NULL,
