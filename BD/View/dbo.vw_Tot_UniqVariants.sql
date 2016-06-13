@@ -5,7 +5,7 @@
 		Tereschenko V.A. 21.04.2016  - modified to view
 
 */
-
+use TotDB
 
 IF OBJECT_ID('dbo.vw_Tot_UniqVariants', 'V') IS NOT NULL
     EXECUTE('DROP VIEW dbo.vw_Tot_UniqVariants');
