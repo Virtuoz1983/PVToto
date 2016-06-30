@@ -12,12 +12,1769 @@
   DTS:ObjectName="LOAD_TABLE_MATCHES_HISTORY"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{FD6EA4EA-FD7E-46B3-9830-A07A8AF3BA24}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{AD08BF31-BDC8-44CF-AB9D-9B2017522C7B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HTTP Connection Manager]"
+      DTS:CreationName="HTTP"
+      DTS:DTSID="{538C513B-0B46-4AE2-A588-1C56174E0CE9}"
+      DTS:ObjectName="HTTP Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="http://www.marathontotoservice.com/sttot/pbstyle/SttotTime16.aspx?id=-3593&amp;GMT=+3">
+          <DTS:HttpConnection
+            DTS:ServerURL="http://www.marathontotoservice.com/sttot/pbstyle/SttotTime16.aspx?id=-3593&amp;GMT=+3">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"></DTS:Property>
+            <DTS:Property
+              DTS:Name="ProxyPassword"
+              Sensitive="1"></DTS:Property>
+          </DTS:HttpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TM]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{2A329F29-5DF8-4D45-B19F-9A8CE0DFE9C4}"
+      DTS:ObjectName="TM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="D:\TotoProjectGH\PVToto\WorkFolder\TM" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4AADD434-0FCD-4907-A81C-722FDC35C454}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Get data from HTML"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;8"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Get data from HTML"
+              version="8">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public Output0Buffer Output0Buffer;
+
+    public virtual void FinishOutputs()
+    {
+    }
+
+    private void MarkOutputsFinished()
+    {
+
+        if (null != Output0Buffer)
+        {
+            Output0Buffer.SetEndOfRowset();
+            Output0Buffer = null;
+        }
+
+    }
+
+    public override void PrimeOutput(int Outputs, int[] OutputIDs, PipelineBuffer[] Buffers, OutputNameMap OutputMap)
+    {
+       for(int Idx = 0; Idx < Outputs; Idx++)
+       {
+            if(OutputIDs[Idx] == GetOutputID(OutputMap, @"Output 0"))
+            {
+                Output0Buffer = new Output0Buffer(Buffers[Idx], GetColumnIndexes(OutputIDs[Idx]), OutputMap);
+            }
+        }
+
+        CreateNewOutputRows();
+
+        FinishOutputs();
+        MarkOutputsFinished();
+
+    }
+
+    public virtual void CreateNewOutputRows()
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+using System.Net;
+using System.IO;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    /// 
+
+    string Internal_URL;
+
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+
+        // Declare variables.        
+        Internal_URL = "http://www.marathontotoservice.com/sttot/pbstyle/SttotTime16.aspx?id=-3593&GMT=+3";
+        //Boolean fireAgainFlag = true;
+        //Boolean StatusIWantToCheck = false;
+        //string SomethingIWantToCheck = "";
+
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    public override void CreateNewOutputRows()
+    {
+        /*
+          Add rows by calling the AddRow method on the member variable named "<Output Name>Buffer".
+          For example, call MyOutputBuffer.AddRow() if your output was named "MyOutput".
+        */
+
+        string sReturnString;
+        string str_tmp;
+        // The WebRequest.
+        HttpWebRequest oWebrequest;
+        oWebrequest = (HttpWebRequest)WebRequest.Create(Internal_URL);
+        //oWebrequest.Credentials = System.Net.CredentialCache.DefaultCredentials;
+        //oWebrequest.UserAgent = "My SSIS Server Name";
+        //oWebrequest.Method = "POST";
+        //oWebrequest.Timeout = (1000 * 60 * 10);
+        //oWebrequest.ProtocolVersion = HttpVersion.Version10;
+
+        // The WebResponse.
+        HttpWebResponse oWResponse;
+        oWResponse = (HttpWebResponse)oWebrequest.GetResponse();
+        Stream s = oWResponse.GetResponseStream();
+        StreamReader sr = new StreamReader(s);
+
+        sReturnString = sr.ReadLine();
+
+         while (sReturnString != null)
+        {
+            if (sReturnString.Contains("sttot-row"))
+            {
+                sReturnString = sr.ReadLine();
+                Output0Buffer.AddRow();
+
+                // get data from <table> 
+                // date
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                //str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>") - 6);
+                //Output0Buffer. = sReturnString.ToString();
+                // num_match
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>") );
+                Output0Buffer.nummatch = Int16.Parse(sReturnString.ToString());
+                // name_match
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>") );
+                Output0Buffer.varname = sReturnString.ToString();
+                // var_result
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.varresult = sReturnString.ToString();
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v10 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v20 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v21 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v30 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v31 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v32 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v00 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v11 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v22 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v33 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v01 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v02 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v12 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v03 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v13 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.v23 = decimal.Parse(sReturnString.ToString());
+                // 
+                sReturnString = sReturnString.Substring(sReturnString.IndexOf("\">") + 2, sReturnString.Length - sReturnString.IndexOf("\">") - 2);
+                str_tmp = sReturnString.Substring(0, sReturnString.IndexOf("</td>"));
+                Output0Buffer.vLD = decimal.Parse(sReturnString.ToString());
+            }
+
+            //Output0Buffer.AddRow();
+            //Output0Buffer.varname = sReturnString.ToString();
+            sReturnString = sr.ReadLine();
+        }
+
+        sr.Close();      
+        oWResponse.Close();
+
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Output0Buffer: ScriptBuffer
+
+{
+    public Output0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public Decimal vLD
+    {
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool vLD_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v32
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool v32_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v31
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool v31_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v30
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool v30_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v21
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool v21_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v20
+    {
+        set
+        {
+            this[5] = value;
+        }
+    }
+    public bool v20_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(5);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v10
+    {
+        set
+        {
+            this[6] = value;
+        }
+    }
+    public bool v10_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(6);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v33
+    {
+        set
+        {
+            this[7] = value;
+        }
+    }
+    public bool v33_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(7);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v22
+    {
+        set
+        {
+            this[8] = value;
+        }
+    }
+    public bool v22_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(8);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v11
+    {
+        set
+        {
+            this[9] = value;
+        }
+    }
+    public bool v11_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(9);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v00
+    {
+        set
+        {
+            this[10] = value;
+        }
+    }
+    public bool v00_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(10);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v23
+    {
+        set
+        {
+            this[11] = value;
+        }
+    }
+    public bool v23_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(11);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v13
+    {
+        set
+        {
+            this[12] = value;
+        }
+    }
+    public bool v13_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(12);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v03
+    {
+        set
+        {
+            this[13] = value;
+        }
+    }
+    public bool v03_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(13);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v12
+    {
+        set
+        {
+            this[14] = value;
+        }
+    }
+    public bool v12_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(14);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v02
+    {
+        set
+        {
+            this[15] = value;
+        }
+    }
+    public bool v02_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(15);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Decimal v01
+    {
+        set
+        {
+            this[16] = value;
+        }
+    }
+    public bool v01_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(16);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String varresult
+    {
+        set
+        {
+            this[17] = value;
+        }
+    }
+    public bool varresult_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(17);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String varname
+    {
+        set
+        {
+            this[18] = value;
+        }
+    }
+    public bool varname_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(18);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 nummatch
+    {
+        set
+        {
+            this[19] = value;
+        }
+    }
+    public bool nummatch_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(19);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 tirag
+    {
+        set
+        {
+            this[20] = value;
+        }
+    }
+    public bool tirag_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(20);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public void AddRow()
+    {
+        base.AddRow();
+    }
+
+    new public void SetEndOfRowset()
+    {
+        base.SetEndOfRowset();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_27e0965380e94d35b6ad6b28e8b832a3.Properties.Settings.get_Default():SC_27e0965380e94d35b6ad6b28e8b832a3.Properties.Sett" +
+    "ings")]
+
+namespace SC_27e0965380e94d35b6ad6b28e8b832a3.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_27e0965380e94d35b6ad6b28e8b832a3.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_27e0965380e94d35b6ad6b28e8b832a3.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_27e0965380e94d35b6ad6b28e8b832a3.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_27e0965380e94d35b6ad6b28e8b832a3.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_27e0965380e94d35b6ad6b28e8b832a3.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>SC_27e0965380e94d35b6ad6b28e8b832a3</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>SC_27e0965380e94d35b6ad6b28e8b832a3</msb:DisplayName>
+		<msb:ProjectId>{38E428A0-1C73-444F-A999-37889FC85D51}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_27e0965380e94d35b6ad6b28e8b832a3.csproj"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+		<msb:Breakpoint Include="9b439bc052554f37ae5aa1f56c6a012e">
+			<msb:FileName>main.cs</msb:FileName>
+			<msb:ColumnNumber>17</msb:ColumnNumber>
+			<msb:Enabled>True</msb:Enabled>
+			<msb:LineNumber>148</msb:LineNumber>
+			<msb:Condition></msb:Condition>
+			<msb:ConditionType>1</msb:ConditionType>
+			<msb:Language>C#</msb:Language>
+			<msb:HitCountType>1</msb:HitCountType>
+			<msb:HitCountTarget>1</msb:HitCountTarget>
+		</msb:Breakpoint>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_27e0965380e94d35b6ad6b28e8b832a3")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_27e0965380e94d35b6ad6b28e8b832a3")]
+[assembly: AssemblyCopyright("Copyright @  2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_27e0965380e94d35b6ad6b28e8b832a3.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C3BBEA9-B998-4131-970D-D0A566084E11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_27e0965380e94d35b6ad6b28e8b832a3</RootNamespace>
+    <AssemblyName>SC_27e0965380e94d35b6ad6b28e8b832a3</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC110</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_27e0965380e94d35b6ad6b28e8b832a3.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[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
+YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVz
+b3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5
+AAAAAAUAbAAAAMgKAAAjfgAANAsAALwKAAAjU3RyaW5ncwAAAADwFQAA8AEAACNVUwDgFwAAEAAA
+ACNHVUlEAAAA8BcAAOgBAAAjQmxvYgAAAAAAAAACAAABVxWiAQkBAAAA+iUzABYAAAEAAAAoAAAA
+CAAAAAkAAABAAAAANAAAAC8AAAAPAAAAAwAAAAMAAAAtAAAALgAAAAEAAAAEAAAAAQAAAAAACgAB
+AAAAAAAGAO8AzgAGAP8AzgAKABwBFQEOADgBIwESAJkBzgAGAKgBzgAKAPoBFQEKAKcFlgUKANgF
+wwUKALUGmwYKAOAGzgYKAPcGzgYKABQHzgYKADMHzgYKAEwHzgYKAGUHzgYKAIAHzgYKAJsHzgYK
+ALQHzgYKAO0HzQcKAA0IzQcGAGwIzgAOAJ4IkwgOALAIkwgOAL8IkwgOANcIkwgKAPEI5wgKAAoJ
+5wgKABcJ5wgKACsJFQEKAGEJFQEKAIQJFQEKAJ4JFQEKALcJpAkKANQJFQEKANkJFQEKAP0JzgYO
+ACkKEwoOAEIKEwoKAFcKzQcAAAAAAQAAAAAAAQABAAEAEAAyAAAABQABAAEAAQAQAEAAAAAIAAQA
+BgABABAASwAAAAkABQAKAAEAEABZAAAADQAFADgAAQAQAGUAAAANAAYAOQAAABAAbwB5AA0ABwA6
+AAABEACoAHkAEQAJAD4ABgBZABMABgBlABcABgBLAB8AAQDWAS8AAQCGBWYAAQCGBWYAEQC3BXAA
+EQDkBXQAEQAoBpIAUCAAAAAAhhhQARsAAQBwIAAAAADGAVYBGwABAHIgAAAAAIEAZAEbAAEAkCAA
+AAAAxgC2ASMAAQDlIAAAAADGAcIBGwAFAOcgAAAAAMYA4wEbAAUA+iAAAAAAxgDuARsABQAEIQAA
+AADGAMIBGwAFAPonAAAAAIYYUAEbAAUAAigAAAAAhhhQATIABQANKAAAAACGCAICPAAIABwoAAAA
+AIYICgJCAAkAMygAAAAAhggZAjwACgBCKAAAAACGCCECQgALAFkoAAAAAIYIMAI8AAwAaCgAAAAA
+hgg4AkIADQB/KAAAAACGCEcCPAAOAI4oAAAAAIYITwJCAA8ApSgAAAAAhgheAjwAEAC0KAAAAACG
+CGYCQgARAMsoAAAAAIYIdQI8ABIA2igAAAAAhgh9AkIAEwDxKAAAAACGCIwCPAAUAAApAAAAAIYI
+lAJCABUAFykAAAAAhgijAjwAFgAmKQAAAACGCKsCQgAXAD0pAAAAAIYIugI8ABgATCkAAAAAhgjC
+AkIAGQBjKQAAAACGCNECPAAaAHMpAAAAAIYI2QJCABsAiykAAAAAhgjoAjwAHACbKQAAAACGCPAC
+QgAdALMpAAAAAIYI/wI8AB4AwykAAAAAhggHA0IAHwDbKQAAAACGCBYDPAAgAOspAAAAAIYIHgNC
+ACEAAyoAAAAAhggtAzwAIgATKgAAAACGCDUDQgAjACsqAAAAAIYIRAM8ACQAOyoAAAAAhghMA0IA
+JQBTKgAAAACGCFsDPAAmAGMqAAAAAIYIYwNCACcAeyoAAAAAhghyAzwAKACLKgAAAACGCHoDQgAp
+AKMqAAAAAIYIiQNHACoArioAAAAAhgiXA0IAKwDGKgAAAACGCKwDRwAsANEqAAAAAIYIuANCAC0A
+6SoAAAAAhgjLA0wALgD5KgAAAACGCNgDQgAvABErAAAAAIYI7ANMADAAISsAAAAAhgj2A0IAMQA5
+KwAAAACGAAcEGwAyAEErAAAAAIYADgQbADIASSsAAAAAhgAdBFEAMgBRKwAAAACGGFABagAyAGAr
+AAAAAIYYUAFqADMAbysAAAAAgxhQARsANAB4KwAAAACTCPQFeAA0ALErAAAAAJMICAZ9ADQAuCsA
+AAAAkwgUBoIANADAKwAAAACWCDgGlgA1ANMrAAAAAIYYUAEbADUAxysAAAAAkRhyCi0BNQAAAAEA
+TAYAAAIAVAYAAAMAXgYAAAQAZgYAAAEAcAYAAAIAdwYAAAMAZgYAAAEAiwYAAAEAiwYAAAEAiwYA
+AAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEA
+iwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYA
+AAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEA
+iwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYAAAEAiwYA
+AAEAiwYAAAEAkQYAAAEAkQYAAAEAiwZRAFABRwBZAFABRwBhAFABRwBpAFABRwBxAFABRwB5AFAB
+RwCBAFABRwCJAFABRwCRAFABRwCZAFABRwChAFABTACpAFABGwAJAFABGwAJAE8IoAAJAFsIpwCx
+AFABGwAJAOMBGwAJAO4BGwC5AKkItgC5AMsIvADJAPgIwQDhAFABxgDpACIJzADxADIJ0ADxADsJ
+1QDxAEMJ2gDxAE4J3gAZAFgJzAD5AGcJ5AA5AGcJ6QDpAG0JGwDJAG0JGwARAFABMgARAHMJ+wAR
+AHwJTAABAVABRwARAAcEGwARAA4EGwARAB0EUQAZAFABGwARAVABGwAZAesJAQEZAQYKCgFBAFAB
+EAExAVABHQFBAVABGwAhAFABGwAuABsAogEuAGMAyAEuAAsAMQEuABMAeQEuACMAogEuACsAogEu
+ADMAeQEuADsAqAEuAEMAogEuAFsAvwFjAIMAsQDjAEsBsQAhAXMBsQBpBWsBJAGJBWsBJAGtAO8A
+GAEEAAEABwArAAgALQAAACkEVQAAAC0EWgAAADgEVQAAADwEWgAAAEcEVQAAAEsEWgAAAFYEVQAA
+AFoEWgAAAGUEVQAAAGkEWgAAAHQEVQAAAHgEWgAAAIMEVQAAAIcEWgAAAJIEVQAAAJYEWgAAAKEE
+VQAAAKUEWgAAALAEVQAAALQEWgAAAL8EVQAAAMMEWgAAAM4EVQAAANIEWgAAAN0EVQAAAOEEWgAA
+AOwEVQAAAPAEWgAAAPsEVQAAAP8EWgAAAAoFVQAAAA4FWgAAABkFVQAAAB0FWgAAACgFXgAAADIF
+WgAAAEMFXgAAAEsFWgAAAFoFYgAAAGMFWgAAAHMFYgAAAHkFWgAAAKcFiAAAACAGjQAAAEQGmwAB
+AAsAAwABAAwABQABAA0ABwABAA4ACQABAA8ACwABABAADQABABEADwABABIAEQABABMAEwABABQA
+FQABABUAFwABABYAGQABABcAGwABABgAHQABABkAHwABABoAIQABABsAIwABABwAJQABAB0AJwAB
+AB4AKQABAB8AKwABACAALQABACEALwABACIAMQABACMAMwABACQANQABACUANwABACYAOQABACcA
+OwABACgAPQABACkAPwABACoAQQABACsAQwABACwARQABAC0ARwABAC4ASQABAC8ASwABADAATQAB
+ADEATwABADIAUQABADMAUwABADQAVQACADsAVwACADwAWQABAD0AWQACAD4AWwAEgAAAAQAAAIkX
+3GsAAAAAAAArCAAACwAAAAAAAAAAAAAAAQCxAAAAAAAEAAAAAAAAAAAAAAAKAAwBAAAAAAQAAAAA
+AAAAAAAAAAoAFQEAAAAACwAAAAAAAAAAAAAAAQB4AQAAAAAAAAAAAQAAAHkKAAAAAAA8TW9kdWxl
+PgBTQ18yN2UwOTY1MzgwZTk0ZDM1YjZhZDZiMjhlOGI4MzJhMy5kbGwAVXNlckNvbXBvbmVudABT
+Y3JpcHRNYWluAE91dHB1dDBCdWZmZXIAQ29ubmVjdGlvbnMAVmFyaWFibGVzAFJlc291cmNlcwBT
+Q18yN2UwOTY1MzgwZTk0ZDM1YjZhZDZiMjhlOGI4MzJhMy5Qcm9wZXJ0aWVzAFNldHRpbmdzAE1p
+Y3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxp
+bmUAU2NyaXB0Q29tcG9uZW50AFNjcmlwdEJ1ZmZlcgBtc2NvcmxpYgBTeXN0ZW0AT2JqZWN0AFN5
+c3RlbS5Db25maWd1cmF0aW9uAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAC5jdG9yAEZpbmlzaE91
+dHB1dHMATWFya091dHB1dHNGaW5pc2hlZABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9z
+dABQaXBlbGluZUJ1ZmZlcgBPdXRwdXROYW1lTWFwAFByaW1lT3V0cHV0AENyZWF0ZU5ld091dHB1
+dFJvd3MASW50ZXJuYWxfVVJMAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUARGVjaW1hbABzZXRfdkxE
+AHNldF92TERfSXNOdWxsAHNldF92MzIAc2V0X3YzMl9Jc051bGwAc2V0X3YzMQBzZXRfdjMxX0lz
+TnVsbABzZXRfdjMwAHNldF92MzBfSXNOdWxsAHNldF92MjEAc2V0X3YyMV9Jc051bGwAc2V0X3Yy
+MABzZXRfdjIwX0lzTnVsbABzZXRfdjEwAHNldF92MTBfSXNOdWxsAHNldF92MzMAc2V0X3YzM19J
+c051bGwAc2V0X3YyMgBzZXRfdjIyX0lzTnVsbABzZXRfdjExAHNldF92MTFfSXNOdWxsAHNldF92
+MDAAc2V0X3YwMF9Jc051bGwAc2V0X3YyMwBzZXRfdjIzX0lzTnVsbABzZXRfdjEzAHNldF92MTNf
+SXNOdWxsAHNldF92MDMAc2V0X3YwM19Jc051bGwAc2V0X3YxMgBzZXRfdjEyX0lzTnVsbABzZXRf
+djAyAHNldF92MDJfSXNOdWxsAHNldF92MDEAc2V0X3YwMV9Jc051bGwAc2V0X3ZhcnJlc3VsdABz
+ZXRfdmFycmVzdWx0X0lzTnVsbABzZXRfdmFybmFtZQBzZXRfdmFybmFtZV9Jc051bGwAc2V0X251
+bW1hdGNoAHNldF9udW1tYXRjaF9Jc051bGwAc2V0X3RpcmFnAHNldF90aXJhZ19Jc051bGwAQWRk
+Um93AFNldEVuZE9mUm93c2V0AEVuZE9mUm93c2V0AHZMRAB2TERfSXNOdWxsAHYzMgB2MzJfSXNO
+dWxsAHYzMQB2MzFfSXNOdWxsAHYzMAB2MzBfSXNOdWxsAHYyMQB2MjFfSXNOdWxsAHYyMAB2MjBf
+SXNOdWxsAHYxMAB2MTBfSXNOdWxsAHYzMwB2MzNfSXNOdWxsAHYyMgB2MjJfSXNOdWxsAHYxMQB2
+MTFfSXNOdWxsAHYwMAB2MDBfSXNOdWxsAHYyMwB2MjNfSXNOdWxsAHYxMwB2MTNfSXNOdWxsAHYw
+MwB2MDNfSXNOdWxsAHYxMgB2MTJfSXNOdWxsAHYwMgB2MDJfSXNOdWxsAHYwMQB2MDFfSXNOdWxs
+AHZhcnJlc3VsdAB2YXJyZXN1bHRfSXNOdWxsAHZhcm5hbWUAdmFybmFtZV9Jc051bGwAbnVtbWF0
+Y2gAbnVtbWF0Y2hfSXNOdWxsAHRpcmFnAHRpcmFnX0lzTnVsbABQYXJlbnRDb21wb25lbnQAU3lz
+dGVtLlJlc291cmNlcwBSZXNvdXJjZU1hbmFnZXIAcmVzb3VyY2VNYW4AU3lzdGVtLkdsb2JhbGl6
+YXRpb24AQ3VsdHVyZUluZm8AcmVzb3VyY2VDdWx0dXJlAGdldF9SZXNvdXJjZU1hbmFnZXIAZ2V0
+X0N1bHR1cmUAc2V0X0N1bHR1cmUAQ3VsdHVyZQBkZWZhdWx0SW5zdGFuY2UAZ2V0X0RlZmF1bHQA
+RGVmYXVsdABPdXRwdXRzAE91dHB1dElEcwBCdWZmZXJzAE91dHB1dE1hcABCdWZmZXIAQnVmZmVy
+Q29sdW1uSW5kZXhlcwB2YWx1ZQBDb21wb25lbnQAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBU
+YXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAU3lzdGVtLlJlZmxlY3Rpb24AQXNzZW1ibHlUaXRsZUF0
+dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlv
+bkF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmli
+dXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRl
+AEFzc2VtYmx5Q3VsdHVyZUF0dHJpYnV0ZQBBc3NlbWJseVZlcnNpb25BdHRyaWJ1dGUAU3lzdGVt
+LlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRl
+AFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFNDXzI3ZTA5NjUzODBlOTRkMzViNmFkNmIy
+OGU4YjgzMmEzAEdldE91dHB1dElEAEdldENvbHVtbkluZGV4ZXMAU1NJU1NjcmlwdENvbXBvbmVu
+dEVudHJ5UG9pbnRBdHRyaWJ1dGUAU3lzdGVtLk5ldABXZWJSZXF1ZXN0AENyZWF0ZQBIdHRwV2Vi
+UmVxdWVzdABXZWJSZXNwb25zZQBHZXRSZXNwb25zZQBIdHRwV2ViUmVzcG9uc2UAU3lzdGVtLklP
+AFN0cmVhbQBHZXRSZXNwb25zZVN0cmVhbQBTdHJlYW1SZWFkZXIAVGV4dFJlYWRlcgBSZWFkTGlu
+ZQBTdHJpbmcAQ29udGFpbnMASW5kZXhPZgBnZXRfTGVuZ3RoAFN1YnN0cmluZwBUb1N0cmluZwBJ
+bnQxNgBQYXJzZQBDbG9zZQBzZXRfSXRlbQBTZXROdWxsAEludmFsaWRPcGVyYXRpb25FeGNlcHRp
+b24ASW50MzIAU3lzdGVtLkRpYWdub3N0aWNzAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUA
+VHlwZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBBc3NlbWJseQBnZXRfQXNz
+ZW1ibHkAU3lzdGVtLkNvbXBvbmVudE1vZGVsAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBFZGl0
+b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQAuY2N0b3IAU0NfMjdl
+MDk2NTM4MGU5NGQzNWI2YWQ2YjI4ZThiODMyYTMuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3Vy
+Y2VzAAARTwB1AHQAcAB1AHQAIAAwAACAo2gAdAB0AHAAOgAvAC8AdwB3AHcALgBtAGEAcgBhAHQA
+aABvAG4AdABvAHQAbwBzAGUAcgB2AGkAYwBlAC4AYwBvAG0ALwBzAHQAdABvAHQALwBwAGIAcwB0
+AHkAbABlAC8AUwB0AHQAbwB0AFQAaQBtAGUAMQA2AC4AYQBzAHAAeAA/AGkAZAA9AC0AMwA1ADkA
+MwAmAEcATQBUAD0AKwAzAAETcwB0AHQAbwB0AC0AcgBvAHcAAQUiAD4AAAs8AC8AdABkAD4AAICb
+SQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0
+ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8A
+IAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAABxUwBDAF8AMgA3AGUAMAA5
+ADYANQAzADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4AGIAOAAzADIAYQAzAC4A
+UAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAAAC52FK0DxoDR6sncLG4
+1xkGAAiJhF3NgIDMkQi3elxWGTTgiQMGEhQDBhIYAyAAAQMGEhALIAQBCB0IHRIVEhkCBg4JIAMB
+EhUdCBIZBSABAREdBCABAQIEIAEBDgQgAQEIAyAAAgQoABEdAygAAgMoAA4DKAAIAwYSBQUgAQES
+BQMGEiEDBhIlBAAAEiEEAAASJQUAAQESJQQIABIhBAgAEiUDBhIgBAAAEiAECAASIAYAAggSGQ4F
+IAEdCAgDBwEIBAEAAAAFAAESXQ4EIAASZQQgABJtBSABARJtAyAADgQgAQIOBCABCA4DIAAIBSAC
+DggIBAABBg4FAAERHQ4LBwUOEmESaRJtEnEFIAIBCBwIAAESgI0RgJEFIAASgJUHIAIBDhKAlQQH
+ARIhBiABARGAnQgBAAIAAAAAAAMAAAFHAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjABAFQO
+FEZyYW1ld29ya0Rpc3BsYXlOYW1lEC5ORVQgRnJhbWV3b3JrIDQoAQAjU0NfMjdlMDk2NTM4MGU5
+NGQzNWI2YWQ2YjI4ZThiODMyYTMAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAxNgAACAEACAAA
+AAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQCYRgAAAAAAAAAAAACuRgAAACAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAoEYAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/
+JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAY
+AACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAAALAD
+AAAAAAAAAAAAALADNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+AAAB
+AAAAAQDca4kXAAABANxriRc/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBhAHIA
+RgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAAsAQQ
+AwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAADsAgAAAQAwADAAMAAwADAANABiADAA
+AABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBDAF8AMgA3AGUAMAA5
+ADYANQAzADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4AGIAOAAzADIAYQAzAAAA
+QAAPAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADYAMAAyADUALgAyADcANgAx
+ADIAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AMgA3AGUAMAA5ADYA
+NQAzADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4AGIAOAAzADIAYQAzAC4AZABs
+AGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgA
+dAAgAEAAIAAgADIAMAAxADYAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBl
+AAAAUwBDAF8AMgA3AGUAMAA5ADYANQAzADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgA
+ZQA4AGIAOAAzADIAYQAzAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAA
+AFMAQwBfADIANwBlADAAOQA2ADUAMwA4ADAAZQA5ADQAZAAzADUAYgA2AGEAZAA2AGIAMgA4AGUA
+OABiADgAMwAyAGEAMwAAAEQADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAw
+AC4ANgAwADIANQAuADIANwA2ADEAMgAAAAAASAAPAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIA
+cwBpAG8AbgAAADEALgAwAC4ANgAwADIANQAuADIANwA2ADEAMgAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAADANgAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_27e0965380e94d35b6ad6b28e8b832a3</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages, Microsoft.SqlServer.VSTAScriptingLib, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="1">
+                    <arrayElement
+                      dataType="System.String">&lt;SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+&lt;SOAP-ENV:Body&gt;
+&lt;a1:ScriptBreakpointInfo id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Microsoft.SqlServer.VSTAHosting/Microsoft.SqlServer.VSTAScriptingLib%2C%20Version%3D11.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3D89845dcd8080cc91"&gt;
+&lt;Enabled&gt;true&lt;/Enabled&gt;
+&lt;File id="ref-3"&gt;main.cs&lt;/File&gt;
+&lt;FileLine&gt;148&lt;/FileLine&gt;
+&lt;FileColumn&gt;17&lt;/FileColumn&gt;
+&lt;/a1:ScriptBreakpointInfo&gt;
+&lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">daa8135de0c4498bdd99a7e8b8e53f15</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost, Microsoft.SqlServer.TxScript, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0]"
+                  hasSideEffects="true"
+                  name="Output 0">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[vLD]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[vLD]"
+                      name="vLD"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v32]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v32]"
+                      name="v32"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v31]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v31]"
+                      name="v31"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v30]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v30]"
+                      name="v30"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v21]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v21]"
+                      name="v21"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v20]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v20]"
+                      name="v20"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v10]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v10]"
+                      name="v10"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v33]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v33]"
+                      name="v33"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v22]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v22]"
+                      name="v22"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v11]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v11]"
+                      name="v11"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v00]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v00]"
+                      name="v00"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v23]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v23]"
+                      name="v23"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v13]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v13]"
+                      name="v13"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v03]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v03]"
+                      name="v03"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v12]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v12]"
+                      name="v12"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v02]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v02]"
+                      name="v02"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v01]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[v01]"
+                      name="v01"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[var_result]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[var_result]"
+                      name="var_result" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[var_name]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[var_name]"
+                      name="var_name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[num_match]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[num_match]"
+                      name="num_match" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[tirag]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get data from HTML.Outputs[Output 0].Columns[tirag]"
+                      name="tirag" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -25,5 +1782,29 @@
 <Objects
   Version="sql11">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Data Flow Task"
+          TopLeft="352,138" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="177,44"
+          Id="Package\Data Flow Task\Get data from HTML"
+          TopLeft="442,73" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

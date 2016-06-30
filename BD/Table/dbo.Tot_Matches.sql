@@ -1,7 +1,9 @@
 /*
-		Internal system tables with Tot_Matches
+		Internal system tables with Tot_Matches (data from "Table of matches")
+		From here:
+		http://www.marathontotoservice.com/sttot/pbstyle/SttotTime16.aspx?id=-3593&GMT=+3
 
-		Yakovlev P.V.   20.04.2016  - created this table
+		Yakovlev P.V.   20.04.2016  - created this table 
 
 */
 
