@@ -11,8 +11,9 @@
   DTS:LocaleID="1058"
   DTS:ObjectName="LOAD_TABLE_MATCHES_HISTORY"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{0196377B-F34E-421E-87F9-474DBC953A26}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{FD6EA4EA-FD7E-46B3-9830-A07A8AF3BA24}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:Variables />

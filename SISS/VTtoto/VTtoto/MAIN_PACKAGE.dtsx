@@ -11,8 +11,9 @@
   DTS:LocaleID="1058"
   DTS:ObjectName="MAIN_PACKAGE"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{8AD2DAAB-0ECA-4760-B4F2-D74B2CB4C866}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{2A56F437-D9E1-46F8-B644-6CC4A1AE2D27}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:Variables />
@@ -75,13 +76,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="192,42"
-          Id="Package\Load history per tirages"
-          TopLeft="450,91" />
-        <NodeLayout
           Size="232,42"
           Id="Package\Load history from TableMatches"
           TopLeft="432,170" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Load history per tirages"
+          TopLeft="450,91" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="547,133">
