@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ADOTot"
+  DTS:DTSID="{C0419679-B8EC-44E9-864C-35EAC3D270E5}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=VM86455;Initial Catalog=TotDB;Integrated Security=True;Application Name=SSIS-VTtoto-{C0419679-B8EC-44E9-864C-35EAC3D270E5}VM86455.TotDB1;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
