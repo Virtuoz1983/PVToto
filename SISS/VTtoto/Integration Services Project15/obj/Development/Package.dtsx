@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/14/2016 9:59:36 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="ШДЕЫ-ПК"
+  DTS:CreatorName="ШДЕЫ-ПК\ШДЕЫ"
+  DTS:DTSID="{0D20F95E-81DB-4EFA-9257-34C9E013AA7E}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.6020.0"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{60AFE8B6-DA1B-4EF3-B1AD-70370F430F07}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>

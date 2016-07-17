@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2010
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "VTtoto", "VTtoto\VTtoto.dtproj", "{48AF7CE7-C222-4740-A407-6119B4079642}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Integration Services Project15", "Integration Services Project15\Integration Services Project15.dtproj", "{482B53DB-66D1-41D6-8557-A8456E0AAAC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{48AF7CE7-C222-4740-A407-6119B4079642}.Development|Default.Build.0 = Development
 		{48AF7CE7-C222-4740-A407-6119B4079642}.VT_Settings|Default.ActiveCfg = VT_Settings
 		{48AF7CE7-C222-4740-A407-6119B4079642}.VT_Settings|Default.Build.0 = VT_Settings
+		{482B53DB-66D1-41D6-8557-A8456E0AAAC3}.Development|Default.ActiveCfg = Development
+		{482B53DB-66D1-41D6-8557-A8456E0AAAC3}.Development|Default.Build.0 = Development
+		{482B53DB-66D1-41D6-8557-A8456E0AAAC3}.VT_Settings|Default.ActiveCfg = Development
+		{482B53DB-66D1-41D6-8557-A8456E0AAAC3}.VT_Settings|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
