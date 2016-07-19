@@ -7,13 +7,13 @@
   DTS:CreatorName="SOFTSERVE\vteresch"
   DTS:DTSID="{B270C70E-4FA7-44AD-8BA7-23B8E2B5ECCC}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LastModifiedProductVersion="11.0.6020.0"
   DTS:LocaleID="1058"
   DTS:ObjectName="LOAD_TABLE_MATCHES_HISTORY"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{4FC02EF4-6034-4274-8C1D-D80F25B62EB9}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{F0488D33-F737-4371-B558-F5F77DFADACE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,6 +22,8 @@
       DTS:CreationName="HTTP"
       DTS:DTSID="{538C513B-0B46-4AE2-A588-1C56174E0CE9}"
       DTS:ObjectName="HTTP Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::ExternalPrm2]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="http://www.marathontotoservice.com/sttot/pbstyle/SttotTime16.aspx?id=-3593&amp;GMT=+3">
