@@ -2,13 +2,13 @@
 		Internal system tables with Tot_RealDataSetPakets
 
 		Yakovlev P.V.   20.04.2016  - created this table
-
+		Tereshenko V.A. 20.07.2016  - renamed this table
 */
 
 USE [TotDB]
-IF OBJECT_ID('dbo.Tot_RealDataSetPakets', 'U') IS NULL
+IF OBJECT_ID('dbo.Tot_PlayerDataSetPakets', 'U') IS NULL
     BEGIN
-	    CREATE TABLE [dbo].[Tot_RealDataSetPakets]
+	    CREATE TABLE [dbo].[Tot_PlayerDataSetPakets]
 			(
 			[id] [int] IDENTITY(1,1) NOT NULL,
 			[tirag] [int] NULL,

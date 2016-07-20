@@ -2,14 +2,14 @@
 		Internal system tables with Tot_RealData
 
 		Yakovlev P.V.   20.04.2016  - created this table
-
+		Tereshenko V.A. 20.07.2016  - renamed this table
 */
 
 USE [TotDB]
-IF OBJECT_ID('dbo.Tot_RealData', 'U') IS NULL
+IF OBJECT_ID('dbo.Tot_PlayerData', 'U') IS NULL
     BEGIN
 
-        CREATE TABLE [dbo].[Tot_RealData]
+        CREATE TABLE [dbo].[Tot_PlayerData]
 			(
 			[id] [int] IDENTITY(1,1) NOT NULL,
 			[kod] [varchar](10) NULL,
