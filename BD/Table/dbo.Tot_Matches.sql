@@ -1,9 +1,7 @@
 /*
-		Internal system tables with Tot_Matches (data from "Table of matches")
-		From here:
-		http://www.marathontotoservice.com/sttot/pbstyle/SttotTime16.aspx?id=-3593&GMT=+3
+		Internal system tables with ranges for percentage.		
 
-		Yakovlev P.V.   20.04.2016  - created this table 
+		Tereshenko V.A.    29.07.2016  - created this table 
 
 */
 
@@ -12,28 +10,28 @@ IF OBJECT_ID('dbo.Tot_Matches', 'U') IS NULL
     BEGIN
 	 CREATE TABLE [dbo].[Tot_Matches]
 			(
-			[id] [int] IDENTITY(1,1) NOT NULL, -- внесли
-			[tirag] [int] NULL,
-			[NumMatch] [int] NULL,
-			[VarName] [nvarchar](200) NULL,
-			[VarResult] [nvarchar](10) NULL,
-			v01 [numeric](9, 2) NULL,
-			v02 [numeric](9, 2) NULL,
-			v12 [numeric](9, 2) NULL,
-			v03 [numeric](9, 2) NULL,
-			v13 [numeric](9, 2) NULL,
-			v23 [numeric](9, 2) NULL,
-			v00 [numeric](9, 2) NULL,
-			v11 [numeric](9, 2) NULL,
-			v22 [numeric](9, 2) NULL,
-			v33 [numeric](9, 2) NULL,
-			v10 [numeric](9, 2) NULL,
-			v20 [numeric](9, 2) NULL,
-			v21 [numeric](9, 2) NULL,
-			v30 [numeric](9, 2) NULL,
-			v31 [numeric](9, 2) NULL,
-			v32 [numeric](9, 2) NULL,
-			vLD [numeric](9, 2) NULL,
+				    [id] [INT] IDENTITY(1,1) NOT NULL,
+					[tirag] [INT] NULL,
+					[NumMatch] [INT] NULL,
+					[VarName] [NVARCHAR](200) NULL,
+					[VarResult] [NVARCHAR](10) NULL,
+					[v01] [NUMERIC](9, 2) NULL,
+					[v02] [NUMERIC](9, 2) NULL,
+					[v12] [NUMERIC](9, 2) NULL,
+					[v03] [NUMERIC](9, 2) NULL,
+					[v13] [NUMERIC](9, 2) NULL,
+					[v23] [NUMERIC](9, 2) NULL,
+					[v00] [NUMERIC](9, 2) NULL,
+					[v11] [NUMERIC](9, 2) NULL,
+					[v22] [NUMERIC](9, 2) NULL,
+					[v33] [NUMERIC](9, 2) NULL,
+					[v10] [NUMERIC](9, 2) NULL,
+					[v20] [NUMERIC](9, 2) NULL,
+					[v21] [NUMERIC](9, 2) NULL,
+					[v30] [NUMERIC](9, 2) NULL,
+					[v31] [NUMERIC](9, 2) NULL,
+					[v32] [NUMERIC](9, 2) NULL,
+					[vLD] [NUMERIC](9, 2) NULL,
 					CONSTRAINT [PK_Matches_ID] PRIMARY KEY CLUSTERED ([id] ASC)
 					WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF,
 					IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
