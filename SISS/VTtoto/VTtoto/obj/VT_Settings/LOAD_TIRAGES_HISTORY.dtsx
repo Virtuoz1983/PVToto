@@ -12,8 +12,8 @@
   DTS:ObjectName="LOAD_TIRAGES_HISTORY"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{E3043C8A-17D2-4C60-BBD5-0BE4399B9F02}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{78EC2CF5-3B9D-4BE3-B4E8-211E1A60CF3C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -34,6 +34,8 @@
       DTS:CreationName="HTTP"
       DTS:DTSID="{E99C555B-1A25-40D8-994C-3F1EA894E684}"
       DTS:ObjectName="HTTPConnectionMarTiragesHistory">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::ExternalPrm]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="http://www.marathontotoservice.com/sttot/HistoryTotal17/HistoryTotalsMT.xls">
@@ -627,631 +629,631 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                   name="Выход источника &quot;Excel&quot;">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[tiragi]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Тиражи]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Тиражи]"
                       length="255"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[tiragi]"
-                      name="tiragi"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Тиражи]"
+                      name="Тиражи"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[datamatch]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Дата]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Дата]"
                       length="255"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[datamatch]"
-                      name="datamatch"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Дата]"
+                      name="Дата"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[jackPot]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Джек-Пот]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Джек-Пот]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[jackPot]"
-                      name="jackPot"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Джек-Пот]"
+                      name="Джек-Пот"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Пул]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Пул]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool]"
-                      name="pool"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Пул]"
+                      name="Пул"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[complex]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Сложность]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Сложность]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[complex]"
-                      name="complex"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Сложность]"
+                      name="Сложность"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[maxWin]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Максимальный_выигрыш]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Максимальный_выигрыш]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[maxWin]"
-                      name="maxWin"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Максимальный_выигрыш]"
+                      name="Максимальный_выигрыш"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quanOption]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Кол-во_вариантов]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Кол-во_вариантов]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quanOption]"
-                      name="quanOption"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Кол-во_вариантов]"
+                      name="Кол-во_вариантов"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quanUniq]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Кол-во_уникальных]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Кол-во_уникальных]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quanUniq]"
-                      name="quanUniq"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Кол-во_уникальных]"
+                      name="Кол-во_уникальных"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[winJack]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Вероятность выигрыша джек-пота, %]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Вероятность выигрыша джек-пота, %]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[winJack]"
-                      name="winJack"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Вероятность выигрыша джек-пота, %]"
+                      name="Вероятность выигрыша джек-пота, %"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan8]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[8 угаданных результатов]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[8 угаданных результатов]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan8]"
-                      name="quan8"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[8 угаданных результатов]"
+                      name="8 угаданных результатов"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum8]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F11]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F11]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum8]"
-                      name="sum8"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F11]"
+                      name="F11"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res8]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F12]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F12]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res8]"
-                      name="res8"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F12]"
+                      name="F12"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan7]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[7 угаданных результатов]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[7 угаданных результатов]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan7]"
-                      name="quan7"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[7 угаданных результатов]"
+                      name="7 угаданных результатов"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum7]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F14]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F14]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum7]"
-                      name="sum7"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F14]"
+                      name="F14"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res7]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F15]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F15]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res7]"
-                      name="res7"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F15]"
+                      name="F15"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan6]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[6 угаданных результатов]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[6 угаданных результатов]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan6]"
-                      name="quan6"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[6 угаданных результатов]"
+                      name="6 угаданных результатов"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum6]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F17]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F17]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum6]"
-                      name="sum6"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F17]"
+                      name="F17"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res6]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F18]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F18]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res6]"
-                      name="res6"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F18]"
+                      name="F18"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan5]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[5 угаданных результатов]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[5 угаданных результатов]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan5]"
-                      name="quan5"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[5 угаданных результатов]"
+                      name="5 угаданных результатов"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum5]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F20]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F20]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum5]"
-                      name="sum5"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F20]"
+                      name="F20"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res5]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F21]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F21]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res5]"
-                      name="res5"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F21]"
+                      name="F21"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan4]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[4 угаданных результата]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[4 угаданных результата]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan4]"
-                      name="quan4"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[4 угаданных результата]"
+                      name="4 угаданных результата"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum4]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F23]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F23]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum4]"
-                      name="sum4"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F23]"
+                      name="F23"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res4]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F24]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F24]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res4]"
-                      name="res4"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F24]"
+                      name="F24"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan3]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[3 угаданных результата]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[3 угаданных результата]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan3]"
-                      name="quan3"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[3 угаданных результата]"
+                      name="3 угаданных результата"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum3]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F26]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F26]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum3]"
-                      name="sum3"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F26]"
+                      name="F26"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res3]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F27]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F27]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res3]"
-                      name="res3"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F27]"
+                      name="F27"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan2]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[2 угаданных результата]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[2 угаданных результата]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan2]"
-                      name="quan2"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[2 угаданных результата]"
+                      name="2 угаданных результата"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum2]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F29]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F29]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum2]"
-                      name="sum2"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F29]"
+                      name="F29"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res2]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F30]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F30]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res2]"
-                      name="res2"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F30]"
+                      name="F30"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[numb]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Номер события]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Номер события]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[numb]"
-                      name="numb"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Номер события]"
+                      name="Номер события"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sect]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[События]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[События]"
                       length="255"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sect]"
-                      name="sect"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[События]"
+                      name="События"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[match]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F33]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F33]"
                       length="255"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[match]"
-                      name="match"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F33]"
+                      name="F33"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[account]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F34]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F34]"
                       length="255"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[account]"
-                      name="account"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F34]"
+                      name="F34"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[exodus]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F35]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F35]"
-                      length="10"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[exodus]"
-                      name="exodus"
+                      length="255"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F35]"
+                      name="F35"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob10]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F36]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F36]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob10]"
-                      name="prob10"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F36]"
+                      name="F36"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool10]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F37]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F37]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool10]"
-                      name="pool10"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F37]"
+                      name="F37"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob20]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F38]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F38]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob20]"
-                      name="prob20"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F38]"
+                      name="F38"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool20]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F39]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F39]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool20]"
-                      name="pool20"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F39]"
+                      name="F39"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob21]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F40]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F40]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob21]"
-                      name="prob21"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F40]"
+                      name="F40"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool21]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F41]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F41]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool21]"
-                      name="pool21"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F41]"
+                      name="F41"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob30]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F42]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F42]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob30]"
-                      name="prob30"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F42]"
+                      name="F42"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool30]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F43]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F43]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool30]"
-                      name="pool30"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F43]"
+                      name="F43"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob31]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F44]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F44]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob31]"
-                      name="prob31"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F44]"
+                      name="F44"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool31]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F45]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F45]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool31]"
-                      name="pool31"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F45]"
+                      name="F45"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob32]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F46]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F46]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob32]"
-                      name="prob32"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F46]"
+                      name="F46"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool32]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F47]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F47]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool32]"
-                      name="pool32"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F47]"
+                      name="F47"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob00]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F48]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F48]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob00]"
-                      name="prob00"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F48]"
+                      name="F48"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool00]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F49]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F49]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool00]"
-                      name="pool00"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F49]"
+                      name="F49"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob11]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F50]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F50]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob11]"
-                      name="prob11"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F50]"
+                      name="F50"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool11]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F51]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F51]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool11]"
-                      name="pool11"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F51]"
+                      name="F51"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob22]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F52]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F52]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob22]"
-                      name="prob22"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F52]"
+                      name="F52"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool22]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F53]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F53]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool22]"
-                      name="pool22"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F53]"
+                      name="F53"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob33]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F54]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F54]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob33]"
-                      name="prob33"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F54]"
+                      name="F54"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool33]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F55]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F55]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool33]"
-                      name="pool33"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F55]"
+                      name="F55"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob01]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F56]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F56]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob01]"
-                      name="prob01"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F56]"
+                      name="F56"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool01]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F57]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F57]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool01]"
-                      name="pool01"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F57]"
+                      name="F57"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob02]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F58]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F58]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob02]"
-                      name="prob02"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F58]"
+                      name="F58"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool02]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F59]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F59]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool02]"
-                      name="pool02"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F59]"
+                      name="F59"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob12]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F60]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F60]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob12]"
-                      name="prob12"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F60]"
+                      name="F60"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool12]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F61]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F61]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool12]"
-                      name="pool12"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F61]"
+                      name="F61"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob03]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F62]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F62]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob03]"
-                      name="prob03"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F62]"
+                      name="F62"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool03]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F63]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F63]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool03]"
-                      name="pool03"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F63]"
+                      name="F63"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob13]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F64]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F64]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob13]"
-                      name="prob13"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F64]"
+                      name="F64"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool13]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F65]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F65]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool13]"
-                      name="pool13"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F65]"
+                      name="F65"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob23]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F66]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F66]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob23]"
-                      name="prob23"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F66]"
+                      name="F66"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool23]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F67]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F67]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool23]"
-                      name="pool23"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F67]"
+                      name="F67"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[probld]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F68]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F68]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[probld]"
-                      name="probld"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F68]"
+                      name="F68"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[poolld]"
+                      refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F69]"
                       dataType="r8"
-                      errorOrTruncationOperation="Преобразование"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F69]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[poolld]"
-                      name="poolld"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F69]"
+                      name="F69"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1545,18 +1547,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                   isErrorOut="true"
                   name="Вывод ошибок источника &quot;Excel&quot;">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Тиражи]"
                       dataType="wstr"
@@ -1908,6 +1898,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                       dataType="r8"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F69]"
                       name="F69" />
+                    <outputColumn
+                      refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1986,425 +1988,425 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                   name="Вход назначения &quot;OLE DB&quot;">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool]"
-                      cachedDataType="r8"
-                      cachedName="pool"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[complex]"
-                      cachedDataType="r8"
-                      cachedName="complex"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[complex]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[complex]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quan8]"
-                      cachedDataType="r8"
-                      cachedName="quan8"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan8]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan8]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quan7]"
-                      cachedDataType="r8"
-                      cachedName="quan7"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan7]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan7]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[sum7]"
-                      cachedDataType="r8"
-                      cachedName="sum7"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum7]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum7]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[res7]"
-                      cachedDataType="r8"
-                      cachedName="res7"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res7]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res7]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quan6]"
-                      cachedDataType="r8"
-                      cachedName="quan6"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan6]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan6]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[sum6]"
-                      cachedDataType="r8"
-                      cachedName="sum6"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum6]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum6]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[res6]"
-                      cachedDataType="r8"
-                      cachedName="res6"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res6]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res6]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quan5]"
-                      cachedDataType="r8"
-                      cachedName="quan5"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan5]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan5]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[sum5]"
-                      cachedDataType="r8"
-                      cachedName="sum5"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum5]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum5]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[res5]"
-                      cachedDataType="r8"
-                      cachedName="res5"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res5]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res5]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quan4]"
-                      cachedDataType="r8"
-                      cachedName="quan4"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan4]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan4]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[sum4]"
-                      cachedDataType="r8"
-                      cachedName="sum4"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum4]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum4]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[res4]"
-                      cachedDataType="r8"
-                      cachedName="res4"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res4]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res4]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quan3]"
-                      cachedDataType="r8"
-                      cachedName="quan3"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan3]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan3]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[sum3]"
-                      cachedDataType="r8"
-                      cachedName="sum3"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum3]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum3]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[res3]"
-                      cachedDataType="r8"
-                      cachedName="res3"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res3]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res3]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quan2]"
-                      cachedDataType="r8"
-                      cachedName="quan2"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan2]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quan2]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[sum2]"
-                      cachedDataType="r8"
-                      cachedName="sum2"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum2]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum2]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[res2]"
-                      cachedDataType="r8"
-                      cachedName="res2"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res2]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res2]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[numb]"
-                      cachedDataType="r8"
-                      cachedName="numb"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[numb]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[numb]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[sect]"
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Тиражи]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="sect"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sect]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sect]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[match]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="match"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[match]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[match]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[account]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="account"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[account]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[account]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[exodus]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="exodus"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[exodus]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[exodus]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob10]"
-                      cachedDataType="r8"
-                      cachedName="prob10"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob10]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob10]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool10]"
-                      cachedDataType="r8"
-                      cachedName="pool10"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool10]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool10]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob20]"
-                      cachedDataType="r8"
-                      cachedName="prob20"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob20]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob20]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool20]"
-                      cachedDataType="r8"
-                      cachedName="pool20"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool20]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool20]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob21]"
-                      cachedDataType="r8"
-                      cachedName="prob21"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob21]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob21]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool21]"
-                      cachedDataType="r8"
-                      cachedName="pool21"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool21]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool21]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob30]"
-                      cachedDataType="r8"
-                      cachedName="prob30"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob30]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob30]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool30]"
-                      cachedDataType="r8"
-                      cachedName="pool30"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool30]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool30]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob31]"
-                      cachedDataType="r8"
-                      cachedName="prob31"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob31]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob31]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool31]"
-                      cachedDataType="r8"
-                      cachedName="pool31"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool31]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool31]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob32]"
-                      cachedDataType="r8"
-                      cachedName="prob32"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob32]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob32]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool32]"
-                      cachedDataType="r8"
-                      cachedName="pool32"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool32]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool32]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob00]"
-                      cachedDataType="r8"
-                      cachedName="prob00"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob00]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob00]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool00]"
-                      cachedDataType="r8"
-                      cachedName="pool00"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool00]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool00]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob11]"
-                      cachedDataType="r8"
-                      cachedName="prob11"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob11]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob11]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool11]"
-                      cachedDataType="r8"
-                      cachedName="pool11"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool11]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool11]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob22]"
-                      cachedDataType="r8"
-                      cachedName="prob22"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob22]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob22]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool22]"
-                      cachedDataType="r8"
-                      cachedName="pool22"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool22]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool22]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob33]"
-                      cachedDataType="r8"
-                      cachedName="prob33"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob33]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob33]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool33]"
-                      cachedDataType="r8"
-                      cachedName="pool33"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool33]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool33]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob01]"
-                      cachedDataType="r8"
-                      cachedName="prob01"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob01]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob01]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool01]"
-                      cachedDataType="r8"
-                      cachedName="pool01"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool01]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool01]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob02]"
-                      cachedDataType="r8"
-                      cachedName="prob02"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob02]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob02]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool02]"
-                      cachedDataType="r8"
-                      cachedName="pool02"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool02]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool02]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob12]"
-                      cachedDataType="r8"
-                      cachedName="prob12"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob12]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob12]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool12]"
-                      cachedDataType="r8"
-                      cachedName="pool12"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool12]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool12]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob03]"
-                      cachedDataType="r8"
-                      cachedName="prob03"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob03]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob03]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool03]"
-                      cachedDataType="r8"
-                      cachedName="pool03"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool03]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool03]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob13]"
-                      cachedDataType="r8"
-                      cachedName="prob13"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob13]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob13]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool13]"
-                      cachedDataType="r8"
-                      cachedName="pool13"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool13]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool13]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[prob23]"
-                      cachedDataType="r8"
-                      cachedName="prob23"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob23]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[prob23]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[pool23]"
-                      cachedDataType="r8"
-                      cachedName="pool23"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool23]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[pool23]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[probld]"
-                      cachedDataType="r8"
-                      cachedName="probld"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[probld]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[probld]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[poolld]"
-                      cachedDataType="r8"
-                      cachedName="poolld"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[poolld]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[poolld]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[jackPot]"
-                      cachedDataType="r8"
-                      cachedName="jackPot"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[jackPot]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[jackPot]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[maxWin]"
-                      cachedDataType="r8"
-                      cachedName="maxWin"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[maxWin]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[maxWin]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quanOption]"
-                      cachedDataType="r8"
-                      cachedName="quanOption"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quanOption]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quanOption]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[quanUniq]"
-                      cachedDataType="r8"
-                      cachedName="quanUniq"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quanUniq]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[quanUniq]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[winJack]"
-                      cachedDataType="r8"
-                      cachedName="winJack"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[winJack]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[winJack]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[sum8]"
-                      cachedDataType="r8"
-                      cachedName="sum8"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum8]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[sum8]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[res8]"
-                      cachedDataType="r8"
-                      cachedName="res8"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res8]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[res8]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[datamatch]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="datamatch"
-                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[data]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[datamatch]" />
-                    <inputColumn
-                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[tiragi]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="tiragi"
+                      cachedName="Тиражи"
                       externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[tirag]"
-                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[tiragi]" />
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Тиражи]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Дата]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Дата"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[data]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Дата]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Пул]"
+                      cachedDataType="r8"
+                      cachedName="Пул"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Пул]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Сложность]"
+                      cachedDataType="r8"
+                      cachedName="Сложность"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[complex]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Сложность]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[8 угаданных результатов]"
+                      cachedDataType="r8"
+                      cachedName="8 угаданных результатов"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan8]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[8 угаданных результатов]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[7 угаданных результатов]"
+                      cachedDataType="r8"
+                      cachedName="7 угаданных результатов"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan7]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[7 угаданных результатов]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F14]"
+                      cachedDataType="r8"
+                      cachedName="F14"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum7]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F14]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F15]"
+                      cachedDataType="r8"
+                      cachedName="F15"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res7]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F15]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[6 угаданных результатов]"
+                      cachedDataType="r8"
+                      cachedName="6 угаданных результатов"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan6]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[6 угаданных результатов]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F17]"
+                      cachedDataType="r8"
+                      cachedName="F17"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum6]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F17]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F18]"
+                      cachedDataType="r8"
+                      cachedName="F18"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res6]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F18]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[5 угаданных результатов]"
+                      cachedDataType="r8"
+                      cachedName="5 угаданных результатов"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan5]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[5 угаданных результатов]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F20]"
+                      cachedDataType="r8"
+                      cachedName="F20"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum5]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F20]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F21]"
+                      cachedDataType="r8"
+                      cachedName="F21"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res5]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F21]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[4 угаданных результата]"
+                      cachedDataType="r8"
+                      cachedName="4 угаданных результата"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan4]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[4 угаданных результата]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F23]"
+                      cachedDataType="r8"
+                      cachedName="F23"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum4]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F23]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F24]"
+                      cachedDataType="r8"
+                      cachedName="F24"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res4]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F24]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[3 угаданных результата]"
+                      cachedDataType="r8"
+                      cachedName="3 угаданных результата"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan3]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[3 угаданных результата]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F26]"
+                      cachedDataType="r8"
+                      cachedName="F26"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum3]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F26]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F27]"
+                      cachedDataType="r8"
+                      cachedName="F27"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res3]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F27]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[2 угаданных результата]"
+                      cachedDataType="r8"
+                      cachedName="2 угаданных результата"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quan2]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[2 угаданных результата]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F29]"
+                      cachedDataType="r8"
+                      cachedName="F29"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum2]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F29]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F30]"
+                      cachedDataType="r8"
+                      cachedName="F30"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res2]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F30]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Номер события]"
+                      cachedDataType="r8"
+                      cachedName="Номер события"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[numb]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Номер события]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[События]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="События"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sect]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[События]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F33]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F33"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[match]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F33]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F34]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F34"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[account]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F34]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F35]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F35"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[exodus]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F35]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F36]"
+                      cachedDataType="r8"
+                      cachedName="F36"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob10]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F36]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F37]"
+                      cachedDataType="r8"
+                      cachedName="F37"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool10]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F37]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F38]"
+                      cachedDataType="r8"
+                      cachedName="F38"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob20]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F38]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F39]"
+                      cachedDataType="r8"
+                      cachedName="F39"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool20]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F39]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F40]"
+                      cachedDataType="r8"
+                      cachedName="F40"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob21]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F40]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F41]"
+                      cachedDataType="r8"
+                      cachedName="F41"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool21]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F41]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F42]"
+                      cachedDataType="r8"
+                      cachedName="F42"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob30]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F42]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F43]"
+                      cachedDataType="r8"
+                      cachedName="F43"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool30]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F43]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F44]"
+                      cachedDataType="r8"
+                      cachedName="F44"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob31]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F44]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F45]"
+                      cachedDataType="r8"
+                      cachedName="F45"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool31]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F45]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F46]"
+                      cachedDataType="r8"
+                      cachedName="F46"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob32]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F46]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F47]"
+                      cachedDataType="r8"
+                      cachedName="F47"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool32]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F47]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F48]"
+                      cachedDataType="r8"
+                      cachedName="F48"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob00]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F48]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F49]"
+                      cachedDataType="r8"
+                      cachedName="F49"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool00]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F49]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F50]"
+                      cachedDataType="r8"
+                      cachedName="F50"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob11]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F50]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F51]"
+                      cachedDataType="r8"
+                      cachedName="F51"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool11]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F51]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F52]"
+                      cachedDataType="r8"
+                      cachedName="F52"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob22]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F52]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F53]"
+                      cachedDataType="r8"
+                      cachedName="F53"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool22]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F53]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F54]"
+                      cachedDataType="r8"
+                      cachedName="F54"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob33]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F54]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F55]"
+                      cachedDataType="r8"
+                      cachedName="F55"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool33]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F55]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F56]"
+                      cachedDataType="r8"
+                      cachedName="F56"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob01]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F56]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F57]"
+                      cachedDataType="r8"
+                      cachedName="F57"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool01]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F57]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F58]"
+                      cachedDataType="r8"
+                      cachedName="F58"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob02]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F58]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F59]"
+                      cachedDataType="r8"
+                      cachedName="F59"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool02]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F59]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F60]"
+                      cachedDataType="r8"
+                      cachedName="F60"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob12]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F60]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F61]"
+                      cachedDataType="r8"
+                      cachedName="F61"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool12]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F61]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F62]"
+                      cachedDataType="r8"
+                      cachedName="F62"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob03]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F62]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F63]"
+                      cachedDataType="r8"
+                      cachedName="F63"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool03]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F63]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F64]"
+                      cachedDataType="r8"
+                      cachedName="F64"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob13]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F64]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F65]"
+                      cachedDataType="r8"
+                      cachedName="F65"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool13]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F65]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F66]"
+                      cachedDataType="r8"
+                      cachedName="F66"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[prob23]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F66]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F67]"
+                      cachedDataType="r8"
+                      cachedName="F67"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[pool23]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F67]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F68]"
+                      cachedDataType="r8"
+                      cachedName="F68"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[probld]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F68]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F69]"
+                      cachedDataType="r8"
+                      cachedName="F69"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[poolld]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F69]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Джек-Пот]"
+                      cachedDataType="r8"
+                      cachedName="Джек-Пот"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[jackPot]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Джек-Пот]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Максимальный_выигрыш]"
+                      cachedDataType="r8"
+                      cachedName="Максимальный_выигрыш"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[maxWin]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Максимальный_выигрыш]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Кол-во_вариантов]"
+                      cachedDataType="r8"
+                      cachedName="Кол-во_вариантов"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quanOption]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Кол-во_вариантов]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Кол-во_уникальных]"
+                      cachedDataType="r8"
+                      cachedName="Кол-во_уникальных"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[quanUniq]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Кол-во_уникальных]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Вероятность выигрыша джек-пота, %]"
+                      cachedDataType="r8"
+                      cachedName="Вероятность выигрыша джек-пота, %"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[winJack]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[Вероятность выигрыша джек-пота, %]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F11]"
+                      cachedDataType="r8"
+                      cachedName="F11"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sum8]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F11]" />
+                    <inputColumn
+                      refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[F12]"
+                      cachedDataType="r8"
+                      cachedName="F12"
+                      externalMetadataColumnId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[res8]"
+                      lineageId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].Columns[F12]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
