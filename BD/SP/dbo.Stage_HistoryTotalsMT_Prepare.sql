@@ -2,6 +2,7 @@
 		Stored procedure for data preparation.
 
 		08.06.2016  Tereschenko V.A. - created
+		01.08.2016  Tereschenko V.A. - added update for exodus field 
 
 SELECT * FROM Stage.HistoryTotalsMT
 */
@@ -37,7 +38,8 @@ WHERE  T.tirag  IS NULL
 
 -- and finally update not empty tirag rows        
 UPDATE h
-	SET tirag = CASE WHEN  TRY_PARSE(tirag AS INT) IS NULL THEN REPLACE(SUBSTRING(tirag,11,4),',','') ELSE tirag END 
+	SET tirag = CASE WHEN  TRY_PARSE(tirag AS INT) IS NULL THEN REPLACE(SUBSTRING(tirag,11,4),',','') ELSE tirag END
+	   ,h.exodus = CASE WHEN h.exodus = N'ËÄ' THEN 'LD' ELSE h.exodus end 
 FROM Stage.HistoryTotalsMT h
 
 END 
