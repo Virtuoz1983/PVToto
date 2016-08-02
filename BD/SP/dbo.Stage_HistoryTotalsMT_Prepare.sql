@@ -14,6 +14,7 @@ BEGIN
 DELETE FROM Stage.HistoryTotalsMT
 WHERE prob10 IS NULL;
 
+
 -- update our empty values 
 WITH cte 
      AS (SELECT T1.id,                 
@@ -39,7 +40,7 @@ WHERE  T.tirag  IS NULL
 -- and finally update not empty tirag rows        
 UPDATE h
 	SET tirag = CASE WHEN  TRY_PARSE(tirag AS INT) IS NULL THEN REPLACE(SUBSTRING(tirag,11,4),',','') ELSE tirag END
-	   ,h.exodus = CASE WHEN h.exodus = N'ËÄ' THEN 'LD' ELSE h.exodus end 
+	   ,h.exodus = CASE WHEN h.exodus = N'Ã‹Ã„' THEN 'LD' ELSE h.exodus end 
 FROM Stage.HistoryTotalsMT h
 
 END 
