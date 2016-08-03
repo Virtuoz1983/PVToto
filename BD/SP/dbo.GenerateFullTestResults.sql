@@ -3,11 +3,12 @@
 	Generate test result wich we can use for analyze or in visualisations 
 
 	Tereshenko V.A.  02.08.2016   - created this SP
+	Tereshenko V.A.  03.08.2016   - changed type for @BetSuma input parameter
 
 */
 
 
-CREATE PROCEDURE [dbo].[GenerateFullTestResults] @tirag INT, @CountRepeats INT, @BetSuma INT 
+CREATE PROCEDURE [dbo].[GenerateFullTestResults] @tirag INT, @CountRepeats INT, @BetSuma NUMERIC(9,2)
 AS 
 BEGIN
 -- generate pakets per percentage
