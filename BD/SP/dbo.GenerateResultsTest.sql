@@ -3,6 +3,7 @@
 	Generate resultes, based on generated pakets
 
 	Tereshenko V.A.  02.08.2016   - created this SP
+	Tereshenko V.A.  03.08.2016   - added CAST operatoin to the final SELECT operator
 
 */
 
@@ -58,14 +59,14 @@ GROUP BY pg.tirag, pg.try
 INSERT INTO [dbo].[Tot_TestResults]
            ([tirag],[try],[sCount8],[sCount7],[sCount6],[sCount5],[sCount4],[sCount3],[sCount2],[KuponCounts]
            ,[Profit8],[Profit7],[Profit6],[Profit5],[Profit4],[Profit3],[Profit2],[FullProfit])
-SELECT gr.*, aa.KuponsCount, gr.sCount8*ff.koef8*@BetAmount AS Profit8, gr.sCount7*ff.koef7*@BetAmount AS Profit7,
-							 gr.sCount6*ff.koef6*@BetAmount AS Profit6, gr.sCount5*ff.koef5*@BetAmount AS Profit5,
-							 gr.sCount4*ff.koef4*@BetAmount AS Profit4, gr.sCount3*ff.koef3*@BetAmount AS Profit3,
-							 gr.sCount2*ff.koef2*@BetAmount AS Profit2,
-							 gr.sCount8*ff.koef8*@BetAmount + gr.sCount7*ff.koef7*@BetAmount +
+SELECT gr.*, aa.KuponsCount, CAST(gr.sCount8*ff.koef8*@BetAmount AS NUMERIC(9,2)) AS Profit8, CAST(gr.sCount7*ff.koef7*@BetAmount AS NUMERIC(9,2)) AS Profit7,
+							 CAST(gr.sCount6*ff.koef6*@BetAmount AS NUMERIC(9,2)) AS Profit6, CAST(gr.sCount5*ff.koef5*@BetAmount AS NUMERIC(9,2)) AS Profit5,
+							 CAST(gr.sCount4*ff.koef4*@BetAmount AS NUMERIC(9,2)) AS Profit4, CAST(gr.sCount3*ff.koef3*@BetAmount AS NUMERIC(9,2)) AS Profit3,
+							 CAST(gr.sCount2*ff.koef2*@BetAmount AS NUMERIC(9,2)) AS Profit2,
+							 CAST(gr.sCount8*ff.koef8*@BetAmount + gr.sCount7*ff.koef7*@BetAmount +
 							 gr.sCount6*ff.koef6*@BetAmount + gr.sCount5*ff.koef5*@BetAmount +
 							 gr.sCount4*ff.koef4*@BetAmount + gr.sCount3*ff.koef3*@BetAmount +
-							 gr.sCount2*ff.koef2*@BetAmount - aa.KuponsCount*@BetAmount AS FullProfit
+							 gr.sCount2*ff.koef2*@BetAmount - aa.KuponsCount*@BetAmount AS NUMERIC(9,2)) AS FullProfit
 FROM CTE_Grouped gr
      JOIN (
 		 SELECT tirag, try, COUNT(1) AS KuponsCount
