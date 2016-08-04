@@ -4,9 +4,9 @@
 
 	Tereshenko V.A.  02.08.2016   - created this SP
 	Tereshenko V.A.  03.08.2016   - changed type for @BetSuma input parameter
+	Tereshenko V.A.  04.08.2016   - added truncate for Tot_KuponsTest table
 
 */
-
 
 CREATE PROCEDURE [dbo].[GenerateFullTestResults] @tirag INT, @CountRepeats INT, @BetSuma NUMERIC(9,2)
 AS 
@@ -28,6 +28,8 @@ EXEC [dbo].[GeneratePaketsForTest] @tirag = @tirag, @KolPerPaket = 10000, @Count
 
 -- store test results into table
 EXEC dbo.GenerateResultsTest @TiragNum = @tirag, @BetAmount = @BetSuma 
+
+TRUNCATE TABLE [dbo].[Tot_KuponsTest] 
 
 END 
 
