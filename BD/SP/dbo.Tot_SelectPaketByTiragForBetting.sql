@@ -1,7 +1,10 @@
 /*
 		Internal system procedure with Tot_SelectPaketByTiragForBetting
 
-		Yakovlev P.V.   21.04.2016  - created this procedure
+		Yakovlev P.V.    21.04.2016  - created this procedure
+		Tereschenko V.A. 23.01.2017  - added new input parameter @Type 
+										- 1 - Marathonbet (by default)
+										- 2 - 1xBet
 
 */
 

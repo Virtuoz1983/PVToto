@@ -3,36 +3,37 @@
 	Use generation procedure for all neccasary tirages. 
 
 	Tereshenko V.A.  02.08.2016   - created this SP
+	Tereshenko V.A.  13.01.2017   - added new parameter @NumTest
 
 */
 
 
-CREATE PROCEDURE [dbo].[GeneratePercentageForAllTirages] (@TiragFrom INT = 1405, @TiragTo INT = 2062, @NumberOfTest INT = 0)
+CREATE PROCEDURE [dbo].[GeneratePercentageForAllTirages] (@TiragFrom INT = 1405, @TiragTo INT = 2062, @NumTest INT)
 AS 
 BEGIN 
 
-DECLARE @NTirag INT
+DECLARE @NTirag int
 
-DECLARE CursorSelPerc CURSOR FOR 
-SELECT n.number
+declare CursorSelPerc cursor for 
+select n.number
  FROM dbo.Numbers n
 WHERE n.number >= @TiragFrom AND n.number <= @TiragTo
 
-OPEN CursorSelPerc 
+open CursorSelPerc 
 
-FETCH NEXT FROM CursorSelPerc INTO @NTirag
+fetch next from CursorSelPerc into @NTirag
 
 WHILE @@FETCH_STATUS = 0 
-BEGIN 
+begin 
 
 -- generate percentage for test 
-EXEC dbo.Tot_CreatePaketsByPerc @NTirag, @NumberOfTest
+EXEC dbo.Tot_CreatePaketsByPerc @NTirag, @NumTest
 
-FETCH NEXT FROM CursorSelPerc INTO @NTirag
-END 
+fetch next from CursorSelPerc into @NTirag
+end 
 
-CLOSE CursorSelPerc 
-DEALLOCATE CursorSelPerc 
+close CursorSelPerc 
+deallocate CursorSelPerc 
 
 END 
 GO
