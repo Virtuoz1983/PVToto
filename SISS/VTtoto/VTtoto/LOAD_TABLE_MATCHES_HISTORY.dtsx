@@ -12,8 +12,8 @@
   DTS:ObjectName="LOAD_TABLE_MATCHES_HISTORY"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{1B336C12-02B4-4F7C-A33F-637A2164F471}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{C4ED1881-F3A7-4E62-9A8E-3555AD7D1F22}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1192,21 +1192,32 @@ namespace SC_27e0965380e94d35b6ad6b28e8b832a3.Properties {
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:CodeName>SC_27e0965380e94d35b6ad6b28e8b832a3</msb:CodeName>
 		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_27e0965380e94d35b6ad6b28e8b832a3</msb:CodeName>
 		<msb:DisplayName>SC_27e0965380e94d35b6ad6b28e8b832a3</msb:DisplayName>
 		<msb:ProjectId>{38E428A0-1C73-444F-A999-37889FC85D51}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="SC_27e0965380e94d35b6ad6b28e8b832a3.csproj"/>
-		<msb:File Include="Properties\AssemblyInfo.cs"/>
 		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="Properties\Settings.Designer.cs"/>
-		<msb:File Include="main.cs"/>
 		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
 		<msb:File Include="ComponentWrapper.cs"/>
+		<msb:Breakpoint Include="66c096d16eaf4a88b76504b534882663">
+			<msb:FileName>main.cs</msb:FileName>
+			<msb:ColumnNumber>21</msb:ColumnNumber>
+			<msb:Enabled>True</msb:Enabled>
+			<msb:LineNumber>166</msb:LineNumber>
+			<msb:Condition></msb:Condition>
+			<msb:ConditionType>1</msb:ConditionType>
+			<msb:Language>C#</msb:Language>
+			<msb:HitCountType>1</msb:HitCountType>
+			<msb:HitCountTarget>1</msb:HitCountTarget>
+		</msb:Breakpoint>
 	</msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -1361,7 +1372,7 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAKEXdlgAAAAAAAAAAOAAAiELAQsAAC4AAAAIAAAAAAAADk0A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMbg/VgAAAAAAAAAAOAAAiELAQsAAC4AAAAIAAAAAAAADk0A
 AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACgAAAAAgAAAAAAAAMAQIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAMBMAABLAAAAAGAAAAgEAAAAAAAAAAAAAAAAAAAA
 AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1483,8 +1494,8 @@ AQANAAUAAQAOAAcAAQAPAAkAAQAQAAsAAQARAA0AAQASAA8AAQATABEAAQAUABMAAQAVABUAAQAW
 ABcAAQAXABkAAQAYABsAAQAZAB0AAQAaAB8AAQAbACEAAQAcACMAAQAdACUAAQAeACcAAQAfACkA
 AQAgACsAAQAhAC0AAQAiAC8AAQAjADEAAQAkADMAAQAlADUAAQAmADcAAQAnADkAAQAoADsAAQAp
 AD0AAQAqAD8AAQArAEEAAQAsAEMAAQAtAEUAAQAuAEcAAQAvAEkAAQAwAEsAAQAxAE0AAQAyAE8A
-AQAzAFEAAQA0AFMAAQA1AFUAAgA6AFcAAgA9AFkAAgA+AFsAAQA/AFsAAgBAAF0ABIAAAAEAAABM
-GCBfAAAAAAAAMgkAAAsAAAAAAAAAAAAAAAEAsQAAAAAABAAAAAAAAAAAAAAACgAMAQAAAAAEAAAA
+AQAzAFEAAQA0AFMAAQA1AFUAAgA6AFcAAgA9AFkAAgA+AFsAAQA/AFsAAgBAAF0ABIAAAAEAAACz
+GHNeAAAAAAAAMgkAAAsAAAAAAAAAAAAAAAEAsQAAAAAABAAAAAAAAAAAAAAACgAMAQAAAAAEAAAA
 AAAAAAAAAAAKABUBAAAAAAsAAAAAAAAAAAAAAAEAeAEAAAAABAAAAAAAAAAAAAAACgDWAQAAAAAL
 AAAAAAAAAAAAAAABAA0GAAAAAAsAAAAAAAAAAAAAAAEAvwsAAAAAAAAAAAEAAACHDQAAAAAAPE1v
 ZHVsZT4AU0NfMjdlMDk2NTM4MGU5NGQzNWI2YWQ2YjI4ZThiODMyYTMuZGxsAFVzZXJDb21wb25l
@@ -1558,7 +1569,7 @@ YQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABj
 AG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAG0MAbwBuAG4AZQBjAHQAaQBvAG4AVABvAHQA
 AHFTAEMAXwAyADcAZQAwADkANgA1ADMAOAAwAGUAOQA0AGQAMwA1AGIANgBhAGQANgBiADIAOABl
 ADgAYgA4ADMAMgBhADMALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMA
-AA5Nc6QRKipPsw3w2163tTkACImEXc2AgMyRCLd6XFYZNOCJAwYSFAMGEhgDIAABAwYSEAsgBAEI
+AKGd01Jl0g9MmOW8X6gSkCgACImEXc2AgMyRCLd6XFYZNOCJAwYSFAMGEhgDIAABAwYSEAsgBAEI
 HQgdEhUSGQMGEh0DBhIhAwYSJQIGDgQgAQEcCSADARIVHQgSGQUgAQERKQQgAQECBCABAQ4EIAEB
 CAMgAAIEKAARKQMoAAIDKAAOAygACAMGEgUFIAEBEgUEIAASLQQoABItAwYSMQMGEjUEAAASMQQA
 ABI1BQABARI1BAgAEjEECAASNQMGEiAEAAASIAQIABIgBgACCBIZDgUgAR0ICAMHAQgEAQAAAAYg
@@ -1577,12 +1588,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAYAACA
 AAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAAALADAAAA
 AAAAAAAAALADNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+AAABAAAA
-AQAgX0wYAAABACBfTBg/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBhAHIARgBp
+AQBzXrMYAAABAHNesxg/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBhAHIARgBp
 AGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAAsAQQAwAA
 AQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAADsAgAAAQAwADAAMAAwADAANABiADAAAABw
 ACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBDAF8AMgA3AGUAMAA5ADYA
 NQAzADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4AGIAOAAzADIAYQAzAAAAQAAP
-AAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADYAMgAyADAALgAyADQAMwA1ADIA
+AAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADYAMwAyADMALgAyADQAMQA3ADkA
 AAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AMgA3AGUAMAA5ADYANQAz
 ADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4AGIAOAAzADIAYQAzAC4AZABsAGwA
 AABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAg
@@ -1591,8 +1602,8 @@ UwBDAF8AMgA3AGUAMAA5ADYANQAzADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4
 AGIAOAAzADIAYQAzAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMA
 QwBfADIANwBlADAAOQA2ADUAMwA4ADAAZQA5ADQAZAAzADUAYgA2AGEAZAA2AGIAMgA4AGUAOABi
 ADgAMwAyAGEAMwAAAEQADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4A
-NgAyADIAMAAuADIANAAzADUAMgAAAAAASAAPAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBp
-AG8AbgAAADEALgAwAC4ANgAyADIAMAAuADIANAAzADUAMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+NgAzADIAMwAuADIANAAxADcAOQAAAAAASAAPAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBp
+AG8AbgAAADEALgAwAC4ANgAzADIAMwAuADIANAAxADcAOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1640,7 +1651,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="BreakpointCollection"
                   typeConverter="NOTBROWSABLE">
                   <arrayElements
-                    arrayElementCount="0" />
+                    arrayElementCount="1">
+                    <arrayElement
+                      dataType="System.String">&lt;SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+&lt;SOAP-ENV:Body&gt;
+&lt;a1:ScriptBreakpointInfo id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Microsoft.SqlServer.VSTAHosting/Microsoft.SqlServer.VSTAScriptingLib%2C%20Version%3D11.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3D89845dcd8080cc91"&gt;
+&lt;Enabled&gt;true&lt;/Enabled&gt;
+&lt;File id="ref-3"&gt;main.cs&lt;/File&gt;
+&lt;FileLine&gt;166&lt;/FileLine&gt;
+&lt;FileColumn&gt;21&lt;/FileColumn&gt;
+&lt;/a1:ScriptBreakpointInfo&gt;
+&lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</arrayElement>
+                  </arrayElements>
                 </property>
                 <property
                   dataType="System.String"
@@ -2211,6 +2235,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Update Totmatch from TotHistory"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6D5508DB-B630-49A2-AD39-B4C2C6EFAF35}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Totmatch from TotHistory"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0DDDF440-2073-496F-AF6C-C47184304F6F}"
+          SQLTask:SqlStatementSource="exec Tot_Matches_PostUpdate" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Update Tot_TableMatchesLink"
       DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:Description="Execute SQL Task"
@@ -2237,6 +2278,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Update Tot_TableMatchesLink" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{43B7D3A3-54B9-46E1-A6E6-83D99CFE295A}"
+      DTS:From="Package\Update Tot_TableMatchesLink"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Update Totmatch from TotHistory" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2249,7 +2298,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="153,42"
           Id="Package\Data Flow Task"
@@ -2258,6 +2307,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Size="223,42"
           Id="Package\Update Tot_TableMatchesLink"
           TopLeft="320,225" />
+        <NodeLayout
+          Size="240,42"
+          Id="Package\Update Totmatch from TotHistory"
+          TopLeft="305,311" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="430,182">
@@ -2272,6 +2325,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="428.25,267">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
