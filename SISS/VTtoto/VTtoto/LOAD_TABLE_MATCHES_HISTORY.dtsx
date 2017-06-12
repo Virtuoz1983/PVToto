@@ -12,8 +12,8 @@
   DTS:ObjectName="LOAD_TABLE_MATCHES_HISTORY"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{C4ED1881-F3A7-4E62-9A8E-3555AD7D1F22}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{0290E91B-4FDA-4E12-8416-232ADBB933F8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1192,32 +1192,21 @@ namespace SC_27e0965380e94d35b6ad6b28e8b832a3.Properties {
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
 		<msb:CodeName>SC_27e0965380e94d35b6ad6b28e8b832a3</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
 		<msb:DisplayName>SC_27e0965380e94d35b6ad6b28e8b832a3</msb:DisplayName>
 		<msb:ProjectId>{38E428A0-1C73-444F-A999-37889FC85D51}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="SC_27e0965380e94d35b6ad6b28e8b832a3.csproj"/>
-		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="BufferWrapper.cs"/>
-		<msb:File Include="main.cs"/>
 		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
 		<msb:File Include="ComponentWrapper.cs"/>
-		<msb:Breakpoint Include="66c096d16eaf4a88b76504b534882663">
-			<msb:FileName>main.cs</msb:FileName>
-			<msb:ColumnNumber>21</msb:ColumnNumber>
-			<msb:Enabled>True</msb:Enabled>
-			<msb:LineNumber>166</msb:LineNumber>
-			<msb:Condition></msb:Condition>
-			<msb:ConditionType>1</msb:ConditionType>
-			<msb:Language>C#</msb:Language>
-			<msb:HitCountType>1</msb:HitCountType>
-			<msb:HitCountTarget>1</msb:HitCountTarget>
-		</msb:Breakpoint>
 	</msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -1372,7 +1361,7 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMbg/VgAAAAAAAAAAOAAAiELAQsAAC4AAAAIAAAAAAAADk0A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGwoC1kAAAAAAAAAAOAAAiELAQsAAC4AAAAIAAAAAAAADk0A
 AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACgAAAAAgAAAAAAAAMAQIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAMBMAABLAAAAAGAAAAgEAAAAAAAAAAAAAAAAAAAA
 AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1494,8 +1483,8 @@ AQANAAUAAQAOAAcAAQAPAAkAAQAQAAsAAQARAA0AAQASAA8AAQATABEAAQAUABMAAQAVABUAAQAW
 ABcAAQAXABkAAQAYABsAAQAZAB0AAQAaAB8AAQAbACEAAQAcACMAAQAdACUAAQAeACcAAQAfACkA
 AQAgACsAAQAhAC0AAQAiAC8AAQAjADEAAQAkADMAAQAlADUAAQAmADcAAQAnADkAAQAoADsAAQAp
 AD0AAQAqAD8AAQArAEEAAQAsAEMAAQAtAEUAAQAuAEcAAQAvAEkAAQAwAEsAAQAxAE0AAQAyAE8A
-AQAzAFEAAQA0AFMAAQA1AFUAAgA6AFcAAgA9AFkAAgA+AFsAAQA/AFsAAgBAAF0ABIAAAAEAAACz
-GHNeAAAAAAAAMgkAAAsAAAAAAAAAAAAAAAEAsQAAAAAABAAAAAAAAAAAAAAACgAMAQAAAAAEAAAA
+AQAzAFEAAQA0AFMAAQA1AFUAAgA6AFcAAgA9AFkAAgA+AFsAAQA/AFsAAgBAAF0ABIAAAAEAAAC9
+GMZqAAAAAAAAMgkAAAsAAAAAAAAAAAAAAAEAsQAAAAAABAAAAAAAAAAAAAAACgAMAQAAAAAEAAAA
 AAAAAAAAAAAKABUBAAAAAAsAAAAAAAAAAAAAAAEAeAEAAAAABAAAAAAAAAAAAAAACgDWAQAAAAAL
 AAAAAAAAAAAAAAABAA0GAAAAAAsAAAAAAAAAAAAAAAEAvwsAAAAAAAAAAAEAAACHDQAAAAAAPE1v
 ZHVsZT4AU0NfMjdlMDk2NTM4MGU5NGQzNWI2YWQ2YjI4ZThiODMyYTMuZGxsAFVzZXJDb21wb25l
@@ -1569,7 +1558,7 @@ YQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABj
 AG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAG0MAbwBuAG4AZQBjAHQAaQBvAG4AVABvAHQA
 AHFTAEMAXwAyADcAZQAwADkANgA1ADMAOAAwAGUAOQA0AGQAMwA1AGIANgBhAGQANgBiADIAOABl
 ADgAYgA4ADMAMgBhADMALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMA
-AKGd01Jl0g9MmOW8X6gSkCgACImEXc2AgMyRCLd6XFYZNOCJAwYSFAMGEhgDIAABAwYSEAsgBAEI
+AGoZ5dNXC75CjQc3QLRE/xgACImEXc2AgMyRCLd6XFYZNOCJAwYSFAMGEhgDIAABAwYSEAsgBAEI
 HQgdEhUSGQMGEh0DBhIhAwYSJQIGDgQgAQEcCSADARIVHQgSGQUgAQERKQQgAQECBCABAQ4EIAEB
 CAMgAAIEKAARKQMoAAIDKAAOAygACAMGEgUFIAEBEgUEIAASLQQoABItAwYSMQMGEjUEAAASMQQA
 ABI1BQABARI1BAgAEjEECAASNQMGEiAEAAASIAQIABIgBgACCBIZDgUgAR0ICAMHAQgEAQAAAAYg
@@ -1588,12 +1577,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAYAACA
 AAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAAALADAAAA
 AAAAAAAAALADNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+AAABAAAA
-AQBzXrMYAAABAHNesxg/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBhAHIARgBp
+AQDGar0YAAABAMZqvRg/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBhAHIARgBp
 AGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAAsAQQAwAA
 AQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAADsAgAAAQAwADAAMAAwADAANABiADAAAABw
 ACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBDAF8AMgA3AGUAMAA5ADYA
 NQAzADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4AGIAOAAzADIAYQAzAAAAQAAP
-AAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADYAMwAyADMALgAyADQAMQA3ADkA
+AAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADYAMwAzADMALgAyADcAMwAzADQA
 AAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AMgA3AGUAMAA5ADYANQAz
 ADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4AGIAOAAzADIAYQAzAC4AZABsAGwA
 AABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAg
@@ -1602,8 +1591,8 @@ UwBDAF8AMgA3AGUAMAA5ADYANQAzADgAMABlADkANABkADMANQBiADYAYQBkADYAYgAyADgAZQA4
 AGIAOAAzADIAYQAzAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMA
 QwBfADIANwBlADAAOQA2ADUAMwA4ADAAZQA5ADQAZAAzADUAYgA2AGEAZAA2AGIAMgA4AGUAOABi
 ADgAMwAyAGEAMwAAAEQADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4A
-NgAzADIAMwAuADIANAAxADcAOQAAAAAASAAPAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBp
-AG8AbgAAADEALgAwAC4ANgAzADIAMwAuADIANAAxADcAOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+NgAzADMAMwAuADIANwAzADMANAAAAAAASAAPAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBp
+AG8AbgAAADEALgAwAC4ANgAzADMAMwAuADIANwAzADMANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1651,20 +1640,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="BreakpointCollection"
                   typeConverter="NOTBROWSABLE">
                   <arrayElements
-                    arrayElementCount="1">
-                    <arrayElement
-                      dataType="System.String">&lt;SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
-&lt;SOAP-ENV:Body&gt;
-&lt;a1:ScriptBreakpointInfo id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Microsoft.SqlServer.VSTAHosting/Microsoft.SqlServer.VSTAScriptingLib%2C%20Version%3D11.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3D89845dcd8080cc91"&gt;
-&lt;Enabled&gt;true&lt;/Enabled&gt;
-&lt;File id="ref-3"&gt;main.cs&lt;/File&gt;
-&lt;FileLine&gt;166&lt;/FileLine&gt;
-&lt;FileColumn&gt;21&lt;/FileColumn&gt;
-&lt;/a1:ScriptBreakpointInfo&gt;
-&lt;/SOAP-ENV:Body&gt;
-&lt;/SOAP-ENV:Envelope&gt;
-</arrayElement>
-                  </arrayElements>
+                    arrayElementCount="0" />
                 </property>
                 <property
                   dataType="System.String"
@@ -2195,6 +2171,111 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       name="vLD"
                       precision="9"
                       scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v01]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v01" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v02]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v02" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v12]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v12" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v03]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v03" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v13]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v13" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v23]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v23" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v00]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v00" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v11]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v11" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v22]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v22" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v33]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v33" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v10]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v20]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v20" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v21]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v21" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v30]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v30" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v31]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v31" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_v32]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_v32" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_vLD]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_vLD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[win_interval_vWin]"
+                      dataType="wstr"
+                      length="12"
+                      name="win_interval_vWin" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[vWin]"
+                      dataType="numeric"
+                      name="vWin"
+                      precision="9"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_champ]"
+                      dataType="i4"
+                      name="id_champ" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exodus]"
+                      dataType="wstr"
+                      length="10"
+                      name="exodus" />
                   </externalMetadataColumns>
                 </input>
               </inputs>

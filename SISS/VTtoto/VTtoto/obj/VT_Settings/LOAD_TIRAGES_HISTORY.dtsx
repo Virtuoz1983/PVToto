@@ -12,8 +12,8 @@
   DTS:ObjectName="LOAD_TIRAGES_HISTORY"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{E1919EAD-A155-4018-8F95-AFE8B2382AD1}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{A51FAF41-F182-4F92-8F51-0D0D2D0D1ADA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1298,87 +1298,108 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                       name="Вероятность выигрыша джек-пота, %" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[8 угаданных результатов]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="8 угаданных результатов" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F11]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F11" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F12]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F12" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[7 угаданных результатов]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="7 угаданных результатов" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F14]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F14" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F15]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F15" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[6 угаданных результатов]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="6 угаданных результатов" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F17]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F17" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F18]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F18" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[5 угаданных результатов]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="5 угаданных результатов" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F20]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F20" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F21]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F21" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[4 угаданных результата]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="4 угаданных результата" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F23]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F23" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F24]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F24" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[3 угаданных результата]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="3 угаданных результата" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F26]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F26" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F27]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F27" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[2 угаданных результата]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="2 угаданных результата" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F29]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F29" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[F30]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="F30" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Номер события]"
@@ -1596,107 +1617,128 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                       name="Вероятность выигрыша джек-пота, %" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[8 угаданных результатов]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[8 угаданных результатов]"
                       name="8 угаданных результатов" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F11]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F11]"
                       name="F11" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F12]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F12]"
                       name="F12" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[7 угаданных результатов]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[7 угаданных результатов]"
                       name="7 угаданных результатов" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F14]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F14]"
                       name="F14" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F15]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F15]"
                       name="F15" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[6 угаданных результатов]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[6 угаданных результатов]"
                       name="6 угаданных результатов" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F17]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F17]"
                       name="F17" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F18]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F18]"
                       name="F18" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[5 угаданных результатов]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[5 угаданных результатов]"
                       name="5 угаданных результатов" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F20]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F20]"
                       name="F20" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F21]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F21]"
                       name="F21" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[4 угаданных результата]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[4 угаданных результата]"
                       name="4 угаданных результата" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F23]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F23]"
                       name="F23" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F24]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F24]"
                       name="F24" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[3 угаданных результата]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[3 угаданных результата]"
                       name="3 угаданных результата" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F26]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F26]"
                       name="F26" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F27]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F27]"
                       name="F27" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[2 угаданных результата]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[2 угаданных результата]"
                       name="2 угаданных результата" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F29]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F29]"
                       name="F29" />
                     <outputColumn
                       refId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F30]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Import data from xls\Data xls.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[F30]"
                       name="F30" />
                     <outputColumn
@@ -1961,7 +2003,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                 <property
                   dataType="System.Boolean"
                   description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
@@ -2542,7 +2584,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[sect]"
                       dataType="wstr"
-                      length="25"
+                      length="250"
                       name="sect" />
                     <externalMetadataColumn
                       refId="Package\Import data from xls\Import from table HistoryTotalsMT.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[match]"
@@ -2858,6 +2900,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Merge DimChamp"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B58BF697-6B43-43AE-AAE7-6C093BA1D96D}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Merge DimChamp"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0DDDF440-2073-496F-AF6C-C47184304F6F}"
+          SQLTask:SqlStatementSource="exec usp_DimChamps_Merge" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Stage PreparePre"
       DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:Description="Execute SQL Task"
@@ -2910,6 +2969,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Merge data from Stage" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{210FCA50-76D6-43D9-8DAC-E99E63C6DFB0}"
+      DTS:From="Package\Merge data from Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Merge DimChamp" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Ограничение]"
       DTS:CreationName=""
       DTS:DTSID="{9B6DE5E6-C092-485F-A167-4412FB99F1D3}"
@@ -2950,6 +3017,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Size="189,42"
           Id="Package\Merge data from Stage"
           TopLeft="333,367" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Merge DimChamp"
+          TopLeft="345,451" />
         <NodeLayout
           Size="163,42"
           Id="Package\Stage PreparePre"
@@ -2994,6 +3065,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="427.5,409">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

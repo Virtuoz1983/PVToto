@@ -21,6 +21,8 @@
     <Configuration>
       <Name>VT_Settings</Name>
       <Options>
+        <ServerName>VM86455</ServerName>
+        <PathOnServer>/SSISDB/TotFolder/VTtoto</PathOnServer>
         <Run64BitRuntime>true</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
